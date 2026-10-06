@@ -17,7 +17,7 @@ Themes for the [Jodit](https://xdsoft.net/jodit/) editor: the editor itself, the
 Catppuccin (Mocha): soothing dark pastel palette with mauve accents, blue links and folders, rounded 8px surfaces.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/catppuccin/catppuccin.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/catppuccin/catppuccin.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/catppuccin/screenshots/main.png" alt="catppuccin: file browser over the editor" />
@@ -31,7 +31,7 @@ Catppuccin (Mocha): soothing dark pastel palette with mauve accents, blue links 
 Dracula: the dark charcoal-purple palette with purple accents, cyan links, red close button and purple folders.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/dracula/dracula.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/dracula/dracula.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/dracula/screenshots/main.png" alt="dracula: file browser over the editor" />
@@ -45,7 +45,7 @@ Dracula: the dark charcoal-purple palette with purple accents, cyan links, red c
 macOS: unified light toolbar, 6px and 10px corners, blue menu highlight with white text, focus rings, Finder sidebar with blue folders and a blue pill under the selected file name.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/macos/macos.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/macos/macos.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/macos/screenshots/main.png" alt="macos: file browser over the editor" />
@@ -59,7 +59,7 @@ macOS: unified light toolbar, 6px and 10px corners, blue menu highlight with whi
 Material 3 (baseline light): tonal surfaces, pill-shaped buttons and navigation items, secondary-container selection, outlined fields, 28px dialogs.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/material3/material3.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/material3/material3.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/material3/screenshots/main.png" alt="material3: file browser over the editor" />
@@ -73,7 +73,7 @@ Material 3 (baseline light): tonal surfaces, pill-shaped buttons and navigation 
 Moono (CKEditor 4): light grey gradient toolbar and status bar, bevelled buttons with a dark pressed state, grey dialog title bar with the green OK button, light blue menu highlight.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/moono/moono.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/moono/moono.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/moono/screenshots/main.png" alt="moono: file browser over the editor" />
@@ -87,7 +87,7 @@ Moono (CKEditor 4): light grey gradient toolbar and status bar, bevelled buttons
 Nord: the arctic Polar Night background with Snow Storm text, Frost blue accents and folders, Aurora red close button.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/nord/nord.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/nord/nord.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/nord/screenshots/main.png" alt="nord: file browser over the editor" />
@@ -101,7 +101,7 @@ Nord: the arctic Polar Night background with Snow Storm text, Frost blue accents
 Microsoft Office 2010 look: blue ribbon gradients, golden hover and orange pressed buttons, Windows 7 dialogs, menus and form fields, Explorer-style file browsers with yellow folders and captions under the thumbnails.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/office2010/office2010.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/office2010/office2010.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/office2010/screenshots/main.png" alt="office2010: file browser over the editor" />
@@ -115,7 +115,7 @@ Microsoft Office 2010 look: blue ribbon gradients, golden hover and orange press
 Syncfusion (Tailwind 3 style): cool grey surfaces, indigo accent, soft shadows, rounded fields with a focus ring, indigo-tinted selection, amber folders.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/syncfusion/syncfusion.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/syncfusion/syncfusion.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/syncfusion/screenshots/main.png" alt="syncfusion: file browser over the editor" />
@@ -129,7 +129,7 @@ Syncfusion (Tailwind 3 style): cool grey surfaces, indigo accent, soft shadows, 
 Windows 10 look: flat white surfaces with a thin blue window frame, square corners, light blue hover and selection, Windows 10 push buttons, fields and context menus with a red close button in dialogs, Explorer-style file browsers with flat yellow folders.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/windows10/windows10.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/windows10/windows10.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/windows10/screenshots/main.png" alt="windows10: file browser over the editor" />
@@ -143,7 +143,7 @@ Windows 10 look: flat white surfaces with a thin blue window frame, square corne
 Windows 11 (Fluent 2): light Mica surfaces, 4px and 8px corners, subtle grey hover, accent #005fb8, fields with an accent underline, File Explorer navigation with an accent pill.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@0.1.0/themes/windows11/windows11.all.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.0.0/themes/windows11/windows11.all.min.css" />
 ```
 
 <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/windows11/screenshots/main.png" alt="windows11: file browser over the editor" />
