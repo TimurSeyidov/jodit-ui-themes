@@ -2,6 +2,9 @@
 // Jodit versions from devDependencies), the built CSS of every theme and
 // themes.json (package version, theme names and descriptions).
 //
+// GitHub Pages lets browsers cache files for 10 minutes, so every link to a
+// demo file carries `?v=%BUILD%`: the commit on CI, a timestamp locally.
+//
 // Usage: node scripts/site.js, then serve _site/ (e.g. python3 -m http.server)
 
 import { copyFile, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
@@ -17,7 +20,8 @@ async function main() {
 	const pkg = JSON.parse(await readFile(path.join(root, 'package.json'), 'utf8'));
 	const versions = {
 		'%JODIT%': pkg.devDependencies.jodit,
-		'%JODIT_PRO%': pkg.devDependencies['jodit-pro']
+		'%JODIT_PRO%': pkg.devDependencies['jodit-pro'],
+		'%BUILD%': (process.env.GITHUB_SHA || Date.now().toString(36)).slice(0, 8)
 	};
 
 	await rm(out, { recursive: true, force: true });
@@ -27,12 +31,12 @@ async function main() {
 		const from = path.join(source, file);
 		const to = path.join(out, file);
 
-		if (file.endsWith('.html')) {
-			let html = await readFile(from, 'utf8');
+		if (file.endsWith('.html') || file.endsWith('.js')) {
+			let text = await readFile(from, 'utf8');
 			for (const [key, value] of Object.entries(versions)) {
-				html = html.replaceAll(key, value);
+				text = text.replaceAll(key, value);
 			}
-			await writeFile(to, html);
+			await writeFile(to, text);
 		} else {
 			await copyFile(from, to);
 		}
@@ -59,7 +63,7 @@ async function main() {
 		JSON.stringify({ version: pkg.version, themes }, null, '\t') + '\n'
 	);
 
-	console.log(`_site: ${themes.length} themes, jodit ${versions['%JODIT%']}, jodit-pro ${versions['%JODIT_PRO%']}`);
+	console.log(`_site: ${themes.length} themes, jodit ${versions['%JODIT%']}, jodit-pro ${versions['%JODIT_PRO%']}, build ${versions['%BUILD%']}`);
 }
 
 main().catch(error => {

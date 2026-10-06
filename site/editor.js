@@ -9,7 +9,7 @@
 	if (!BUILT_IN.includes(theme) && /^[a-z0-9-]+$/.test(theme)) {
 		const link = document.createElement('link');
 		link.rel = 'stylesheet';
-		link.href = `themes/${theme}/${theme}.all.min.css`;
+		link.href = `themes/${theme}/${theme}.all.min.css?v=%BUILD%`;
 		document.head.appendChild(link);
 	}
 

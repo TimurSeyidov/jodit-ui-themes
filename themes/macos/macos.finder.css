@@ -779,8 +779,25 @@
 		.jodit_theme_macos,
 		.jodit-dialog_theme_macos,
 		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-settings__close {
+  color: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
 	) .jodit-ui-browser-settings__close svg {
-  fill: var(--ui-muted);
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-settings__close:hover {
+  color: var(--ui-text);
 }
 :is(
 		.jodit_theme_macos,

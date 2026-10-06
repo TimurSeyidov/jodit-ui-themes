@@ -389,8 +389,19 @@
 			color: var(--office-title);
 		}
 
-		&__close svg {
-			fill: var(--office-text);
+		&__close {
+			color: var(--office-text);
+
+			svg {
+				width: 16px;
+				height: 16px;
+				fill: none;
+				stroke: currentColor;
+			}
+
+			&:hover {
+				color: var(--office-title);
+			}
 		}
 
 		&__options::-webkit-scrollbar-track {

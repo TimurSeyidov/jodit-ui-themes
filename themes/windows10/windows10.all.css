@@ -1528,8 +1528,25 @@
 		.jodit_theme_windows10,
 		.jodit-dialog_theme_windows10,
 		.jodit-file-browser-pro_theme_windows10
+	) .jodit-ui-browser-settings__close {
+  color: var(--win-muted);
+}
+:is(
+		.jodit_theme_windows10,
+		.jodit-dialog_theme_windows10,
+		.jodit-file-browser-pro_theme_windows10
 	) .jodit-ui-browser-settings__close svg {
-  fill: var(--win-muted);
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+}
+:is(
+		.jodit_theme_windows10,
+		.jodit-dialog_theme_windows10,
+		.jodit-file-browser-pro_theme_windows10
+	) .jodit-ui-browser-settings__close:hover {
+  color: var(--win-text);
 }
 :is(
 		.jodit_theme_windows10,

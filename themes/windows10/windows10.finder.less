@@ -401,8 +401,19 @@
 			font-weight: normal;
 		}
 
-		&__close svg {
-			fill: var(--win-muted);
+		&__close {
+			color: var(--win-muted);
+
+			svg {
+				width: 16px;
+				height: 16px;
+				fill: none;
+				stroke: currentColor;
+			}
+
+			&:hover {
+				color: var(--win-text);
+			}
 		}
 
 		&__options::-webkit-scrollbar-track {
