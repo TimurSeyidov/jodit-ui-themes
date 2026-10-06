@@ -1,0 +1,47 @@
+html,
+body {
+	margin: 0;
+	background: transparent;
+	font-family: system-ui, -apple-system, 'Segoe UI', roboto, sans-serif;
+}
+
+body {
+	padding: 12px;
+}
+
+.bar {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	margin-bottom: 10px;
+	color: #6b7280;
+	font-size: 13px;
+}
+
+.bar button {
+	padding: 5px 12px;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	background: #fff;
+	color: #111827;
+	cursor: pointer;
+	font: inherit;
+}
+
+.bar button:hover {
+	background: #f3f4f6;
+}
+
+.demo-toast {
+	position: fixed;
+	z-index: 2147483647;
+	top: 12px;
+	left: 50%;
+	padding: 8px 14px;
+	border-radius: 6px;
+	background: #111827;
+	box-shadow: 0 6px 20px rgb(0 0 0 / 25%);
+	color: #fff;
+	font-size: 13px;
+	transform: translateX(-50%);
+}

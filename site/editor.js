@@ -1,0 +1,62 @@
+// Shared setup of the demo editor pages (free.html, pro.html): theme from
+// the `theme` query parameter, the demo connector, a toast for fake actions.
+
+(function () {
+	const params = new URLSearchParams(location.search);
+	const theme = params.get('theme') || 'default';
+	const BUILT_IN = ['default', 'dark'];
+
+	if (!BUILT_IN.includes(theme) && /^[a-z0-9-]+$/.test(theme)) {
+		const link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.href = `themes/${theme}/${theme}.all.min.css`;
+		document.head.appendChild(link);
+	}
+
+	function toast(text) {
+		const el = document.createElement('div');
+		el.className = 'demo-toast';
+		el.textContent = text;
+		document.body.appendChild(el);
+		setTimeout(() => el.remove(), 2500);
+	}
+
+	DemoConnector.onFakeAction(action =>
+		toast(`Demo mode: "${action}" is not saved on the server`)
+	);
+
+	/**
+	 * Create the demo editor.
+	 *
+	 * @param {object} [extra] options added to the shared ones (e.g. `license`)
+	 * @returns {object} the Jodit instance
+	 */
+	function makeEditor(extra = {}) {
+		const editor = Jodit.make('#editor', {
+			theme,
+			height: 560,
+			toolbarAdaptive: false,
+			// Also used by the file browser: Jodit passes it the editor uploader
+			uploader: {
+				url: DemoConnector.url,
+				customUploadFunction: DemoConnector.upload
+			},
+			filebrowser: {
+				theme,
+				ajax: { url: DemoConnector.url, xhr: DemoConnector.xhr }
+			},
+			...extra
+		});
+
+		document.getElementById('browser').addEventListener('click', () => {
+			editor.filebrowser.open(({ baseurl, files }) => {
+				files.forEach(file => editor.s.insertImage(baseurl + file));
+			});
+		});
+
+		window.editor = editor;
+		return editor;
+	}
+
+	window.DemoEditor = { theme, make: makeEditor };
+})();

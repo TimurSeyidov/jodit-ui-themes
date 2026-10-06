@@ -28,7 +28,7 @@ export async function themeNames() {
 }
 
 // Description from themes/<name>/README.md without its title
-async function description(theme) {
+export async function description(theme) {
 	try {
 		const text = await readFile(path.join(themesDir, theme, 'README.md'), 'utf8');
 		return text.replace(/^# .*\n/, '').trim();

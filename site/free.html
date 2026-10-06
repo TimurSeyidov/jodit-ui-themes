@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Jodit free demo</title>
+		<link rel="icon" href="data:," />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit@%JODIT%/es2021/jodit.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/jodit@%JODIT%/es2021/jodit.min.js"></script>
+		<link rel="stylesheet" href="frame.css" />
+		<script src="mock.js"></script>
+		<script src="editor.js"></script>
+	</head>
+	<body>
+		<div class="bar">
+			<button id="browser" type="button">Open file browser</button>
+			<span>Jodit %JODIT% · free file browser</span>
+		</div>
+		<textarea id="editor">
+			<h2>Quarterly report</h2>
+			<p>Sales grew by <strong>12%</strong> compared to the last quarter. See the <a href="https://github.com/TimurSeyidov/jodit-ui-themes">full table</a> for details.</p>
+			<ul><li>New customers: 140</li><li>Returning customers: 380</li></ul>
+			<p>Use the image button or <em>Open file browser</em> to browse the demo files.</p>
+		</textarea>
+		<script>
+			DemoEditor.make();
+		</script>
+	</body>
+</html>

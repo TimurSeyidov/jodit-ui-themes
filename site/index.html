@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>jodit-ui-themes demo</title>
+		<meta name="description" content="Live demo of CSS themes for the Jodit editor, its file browser and the Jodit PRO finder." />
+		<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 2.5C1 1.7 1.7 1 2.5 1h3.6l1.6 1.6h5.8c.8 0 1.5.7 1.5 1.5v7.4c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%23e8b84a'/%3E%3Cpath d='M1 5h14v6.5c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%23fbd96e'/%3E%3C/svg%3E" />
+		<link rel="stylesheet" href="site.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div>
+				<h1>jodit-ui-themes</h1>
+				<p>CSS themes for the Jodit editor, its file browser and the Jodit PRO finder.</p>
+			</div>
+			<nav class="links">
+				<a href="https://github.com/TimurSeyidov/jodit-ui-themes">GitHub</a>
+				<a href="https://www.npmjs.com/package/jodit-ui-themes">npm <span id="version"></span></a>
+			</nav>
+		</header>
+
+		<main>
+			<div class="controls">
+				<div class="tabs" role="tablist" aria-label="Jodit edition">
+					<button type="button" role="tab" data-edition="free">Jodit</button>
+					<button type="button" role="tab" data-edition="pro">Jodit PRO</button>
+				</div>
+				<label class="theme">
+					Theme
+					<select id="theme"></select>
+				</label>
+			</div>
+
+			<p id="description" class="description"></p>
+
+			<div id="snippet" class="snippet">
+				<code id="snippet-code"></code>
+				<button id="copy" type="button">Copy</button>
+			</div>
+
+			<iframe id="frame" class="frame" title="Jodit demo"></iframe>
+
+			<ul class="notes">
+				<li>The file browsers show the files of the public Jodit demo connector. Uploads, renames, moves and deletes are answered by the page itself and are not saved.</li>
+				<li>Images uploaded into the text are embedded as data URLs.</li>
+				<li>Jodit PRO shows a trial note until a license key is set for this domain.</li>
+			</ul>
+		</main>
+
+		<script>
+			const BUILT_IN = {
+				default: 'Jodit default theme, no extra stylesheet.',
+				dark: 'Jodit built-in dark theme, no extra stylesheet.'
+			};
+
+			const frame = document.getElementById('frame');
+			const select = document.getElementById('theme');
+			const tabs = [...document.querySelectorAll('[data-edition]')];
+			let info;
+
+			// State lives in the hash: #<edition>/<theme>
+			function state() {
+				const [edition, theme] = location.hash.slice(1).split('/');
+				return {
+					edition: edition === 'pro' ? 'pro' : 'free',
+					theme: theme && select.querySelector(`option[value="${theme}"]`) ? theme : info.themes[0].name
+				};
+			}
+
+			function render() {
+				const { edition, theme } = state();
+				const own = info.themes.find(item => item.name === theme);
+				const href = own
+					? `https://cdn.jsdelivr.net/npm/jodit-ui-themes@${info.version}/themes/${theme}/${theme}.all.min.css`
+					: '';
+
+				tabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.dataset.edition === edition)));
+				select.value = theme;
+				document.getElementById('description').textContent = own ? own.description : BUILT_IN[theme];
+				document.getElementById('snippet').hidden = !own;
+				document.getElementById('snippet-code').textContent = `<link rel="stylesheet" href="${href}" />`;
+
+				const src = `${edition}.html?theme=${encodeURIComponent(theme)}`;
+				if (frame.getAttribute('src') !== src) {
+					frame.setAttribute('src', src);
+				}
+			}
+
+			function go(edition, theme) {
+				location.hash = `${edition}/${theme}`;
+			}
+
+			tabs.forEach(tab => tab.addEventListener('click', () => go(tab.dataset.edition, state().theme)));
+			select.addEventListener('change', () => go(state().edition, select.value));
+			window.addEventListener('hashchange', render);
+
+			document.getElementById('copy').addEventListener('click', async event => {
+				try {
+					await navigator.clipboard.writeText(document.getElementById('snippet-code').textContent);
+					event.target.textContent = 'Copied';
+				} catch {
+					event.target.textContent = 'Select and copy';
+				}
+				setTimeout(() => (event.target.textContent = 'Copy'), 1500);
+			});
+
+			fetch('themes.json')
+				.then(response => response.json())
+				.then(data => {
+					info = data;
+					document.getElementById('version').textContent = `v${info.version}`;
+
+					const own = document.createElement('optgroup');
+					own.label = 'jodit-ui-themes';
+					info.themes.forEach(({ name }) => own.appendChild(new Option(name, name)));
+
+					const builtIn = document.createElement('optgroup');
+					builtIn.label = 'Built into Jodit';
+					Object.keys(BUILT_IN).forEach(name => builtIn.appendChild(new Option(name, name)));
+
+					select.append(own, builtIn);
+					render();
+				});
+		</script>
+	</body>
+</html>

@@ -8,6 +8,8 @@
 
 Themes for the [Jodit](https://xdsoft.net/jodit/) editor: the editor itself, the free file browser and the Jodit PRO finder. Each theme is a plain stylesheet loaded after the Jodit styles; no Jodit rebuild is needed.
 
+**[Live demo](https://timurseyidov.github.io/jodit-ui-themes/)**: try every theme with Jodit and Jodit PRO, including the file browsers.
+
 ## Themes
 
 <!-- themes:start -->
@@ -231,11 +233,16 @@ npm run build   # compile every themes/*/*.less into .css and .min.css
 npm run watch   # rebuild on every .less change
 npm run screenshots              # screenshots of every theme + README theme list
 npm run screenshots -- office2010   # only the given themes
+npm run site                     # assemble the live demo into _site/
 ```
 
 `npm run screenshots` opens Jodit and Jodit PRO in a headless browser, saves `themes/<name>/screenshots/{main,editor,finder,finder-pro}.png` and rewrites the list between the `themes` markers in this README: for every theme its name, the description from `themes/<name>/README.md` and the screenshots. The file browsers use a built-in fake connector with fixed files, so the pictures are the same on every run. It uses the Playwright Chromium (`npx playwright install chromium`) or, when that is missing, the installed Google Chrome. Fonts come from the operating system, so take screenshots on the same machine to keep them comparable.
 
 The generated `.css` and `.min.css` files are committed together with their `.less` sources, so a theme can be used straight from the repository. After changing a `.less` file, run `npm run build` and commit the result: CI rebuilds the themes and fails if the committed CSS is out of date.
+
+## Live demo
+
+`site/` holds the demo pages; `npm run site` assembles them with the built themes into `_site/` (serve it with any static server, e.g. `python3 -m http.server -d _site`). The Pages workflow deploys it on every push to `main`. Jodit and Jodit PRO come from jsDelivr in the versions listed in `devDependencies`. The file browsers read the public Jodit demo connector; actions that would change files are answered by `site/mock.js` and never reach the server.
 
 ## Releasing
 

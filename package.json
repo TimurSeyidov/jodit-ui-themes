@@ -41,7 +41,8 @@
 		"screenshots": "node scripts/screenshots.js",
 		"readme": "node scripts/readme.js",
 		"version": "npm run readme && git add README.md",
-		"prepublishOnly": "npm run build"
+		"prepublishOnly": "npm run build",
+		"site": "node scripts/site.js"
 	},
 	"devDependencies": {
 		"clean-css": "^5.3.3",

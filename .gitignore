@@ -4,3 +4,4 @@ dev/
 # partials are never compiled on their own
 themes/_base/*.css
 themes/*/_*.css
+_site/

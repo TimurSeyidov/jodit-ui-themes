@@ -1,0 +1,164 @@
+:root {
+	--bg: #f6f7f9;
+	--surface: #fff;
+	--text: #111827;
+	--muted: #6b7280;
+	--line: #e5e7eb;
+	--accent: #2563eb;
+	--code-bg: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #0f1115;
+		--surface: #181b21;
+		--text: #e5e7eb;
+		--muted: #9ca3af;
+		--line: #2a2f38;
+		--accent: #60a5fa;
+		--code-bg: #20242c;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 1180px;
+	margin: 0 auto;
+	padding: 24px 16px 48px;
+	background: var(--bg);
+	color: var(--text);
+	font-family: system-ui, -apple-system, 'Segoe UI', roboto, sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+a {
+	color: var(--accent);
+}
+
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 24px;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.header h1 {
+	margin: 0;
+	font-size: 26px;
+}
+
+.header p {
+	margin: 4px 0 0;
+	color: var(--muted);
+}
+
+.links {
+	display: flex;
+	gap: 16px;
+}
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 20px;
+	align-items: center;
+}
+
+.tabs {
+	display: inline-flex;
+	padding: 3px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--surface);
+}
+
+.tabs button {
+	padding: 6px 16px;
+	border: 0;
+	border-radius: 6px;
+	background: transparent;
+	color: var(--muted);
+	cursor: pointer;
+	font: inherit;
+}
+
+.tabs button[aria-selected='true'] {
+	background: var(--accent);
+	color: #fff;
+}
+
+.theme {
+	display: inline-flex;
+	gap: 8px;
+	align-items: center;
+	color: var(--muted);
+}
+
+.theme select {
+	padding: 6px 8px;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	background: var(--surface);
+	color: var(--text);
+	font: inherit;
+}
+
+.description {
+	min-height: 1.5em;
+	margin: 14px 0 10px;
+	color: var(--muted);
+}
+
+.snippet {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin-bottom: 14px;
+}
+
+.snippet[hidden] {
+	display: none;
+}
+
+.snippet code {
+	overflow: auto;
+	flex: 1;
+	padding: 8px 10px;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	background: var(--code-bg);
+	font-size: 13px;
+	white-space: nowrap;
+}
+
+.snippet button {
+	padding: 7px 14px;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	background: var(--surface);
+	color: var(--text);
+	cursor: pointer;
+	font: inherit;
+}
+
+.frame {
+	display: block;
+	width: 100%;
+	height: 640px;
+	border: 1px solid var(--line);
+	border-radius: 10px;
+	background: #fff;
+}
+
+.notes {
+	padding-left: 20px;
+	margin: 16px 0 0;
+	color: var(--muted);
+	font-size: 13px;
+}
