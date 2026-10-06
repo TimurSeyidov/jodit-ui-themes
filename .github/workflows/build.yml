@@ -1,0 +1,32 @@
+name: Build
+
+# The generated .css and .min.css files are committed next to their .less
+# sources. Fail when they are out of date.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-generated:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Generated files are up to date
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Generated CSS is out of date. Run 'npm run build' and commit the result."
+            git status --porcelain
+            git diff --stat
+            exit 1
+          fi

@@ -1,0 +1,6 @@
+node_modules/
+dev/
+.DS_Store
+# partials are never compiled on their own
+themes/_base/*.css
+themes/*/_*.css

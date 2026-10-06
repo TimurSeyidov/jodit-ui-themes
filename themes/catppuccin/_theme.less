@@ -1,0 +1,73 @@
+/*!
+ * jodit-ui-themes: Catppuccin theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Catppuccin (Mocha): soothing dark pastel palette with mauve accents, blue links and folders, rounded 8px surfaces.
+//
+// Palette (`.theme-tokens()`) and the rules beyond the shared base
+// (`.theme-editor()`, `.theme-finder()`) for the catppuccin.*.less files.
+// The tokens are described in ../_base/tokens.less.
+
+.theme-tokens() {
+	// Native scrollbars and form controls in dark colours
+	color-scheme: dark;
+
+	--ui-text: #cdd6f4;
+	--ui-muted: #9399b2;
+	--ui-icon: #bac2de;
+	--ui-accent: #cba6f7;
+	--ui-link: #89b4fa;
+	--ui-selection: #45475a;
+	--ui-surface: #1e1e2e;
+	--ui-surface-alt: #181825;
+	--ui-content-bg: #1e1e2e;
+	--ui-line: #313244;
+	--ui-frame: #11111b;
+	--ui-radius: 8px;
+	--ui-shadow: 0 10px 30px rgb(0 0 0 / 50%);
+	--ui-toolbar-bg: #181825;
+	--ui-toolbar-border: #11111b;
+	--ui-btn-radius: 6px;
+	--ui-hover-bg: #313244;
+	--ui-pressed-bg: #45475a;
+	--ui-pressed-hover-bg: #585b70;
+	--ui-pressed-icon: #cba6f7;
+	--ui-status-text: #9399b2;
+	--ui-menu-bg: #181825;
+	--ui-menu-border: #313244;
+	--ui-menu-radius: 8px;
+	--ui-menu-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+	--ui-menu-hover-bg: #313244;
+	--ui-field-bg: #181825;
+	--ui-field-border: #45475a;
+	--ui-field-hover-border: #585b70;
+	--ui-field-radius: 6px;
+	--ui-push-bg: #313244;
+	--ui-push-border: #45475a;
+	--ui-push-hover-bg: #45475a;
+	--ui-push-active-bg: #585b70;
+	--ui-primary-text: #11111b;
+	--ui-primary-hover-bg: #d6b8fa;
+	--ui-dialog-radius: 10px;
+	--ui-dialog-header-bg: #181825;
+	--ui-dialog-header-border: #11111b;
+	--ui-dialog-footer-bg: #181825;
+	--ui-close-hover-bg: #f38ba8;
+	--ui-close-hover-icon: #11111b;
+	--ui-pane-bg: #181825;
+	--ui-pane-border: #11111b;
+	--ui-item-radius: 6px;
+	--ui-item-hover-bg: #313244;
+	--ui-item-selected-bg: #45475a;
+	--ui-thumb-radius: 6px;
+	--ui-scrollbar: #45475a;
+	--ui-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 2.5C1 1.7 1.7 1 2.5 1h3.6l1.6 1.6h5.8c.8 0 1.5.7 1.5 1.5v7.4c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%2374a0e8'/%3E%3Cpath d='M1 5h14v6.5c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%2389b4fa'/%3E%3C/svg%3E");
+}
+
+.theme-editor() {
+}
+
+.theme-finder() {
+}

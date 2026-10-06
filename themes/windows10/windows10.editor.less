@@ -1,0 +1,333 @@
+/*!
+ * jodit-ui-themes: Windows 10 theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Windows 10 theme, editor part: flat white surfaces, a thin blue window
+// frame, light blue hover and selection, square corners, Windows 10 buttons,
+// fields and context menus.
+
+// Usage: load the stylesheet after the Jodit styles and set
+// `theme: 'windows10'`. Jodit names its custom properties `--jd-*` in the
+// built CSS, so the theme overrides them by those names.
+//
+// The theme class lands on the editor container and popups
+// (`jodit_theme_windows10`), on dialogs (`jodit-dialog_theme_windows10`)
+// and on the Jodit PRO finder window (`jodit-file-browser-pro_theme_windows10`).
+
+:is(
+		.jodit_theme_windows10,
+		.jodit-dialog_theme_windows10,
+		.jodit-file-browser-pro_theme_windows10
+	) {
+	--win-frame: #9fc0ea;
+	--win-line: #e5e5e5;
+	--win-text: #1a1a1a;
+	--win-muted: #6d6d6d;
+	--win-icon: #333;
+	--win-accent: #0078d7;
+	--win-hover: #e5f3ff;
+	--win-hover-border: #cce8ff;
+	--win-selected: #cce8ff;
+	--win-selected-border: #99d1ff;
+	--win-menu: #f2f2f2;
+	--win-menu-hover: #91c9f7;
+	--win-field-border: #7a7a7a;
+
+	--jd-color-border: var(--win-line);
+	--jd-color-panel: #fff;
+	--jd-color-text: var(--win-text);
+	--jd-color-text-icons: var(--win-icon);
+	--jd-color-icon: var(--win-icon);
+	--jd-color-label: var(--win-muted);
+	--jd-color-background-selection: var(--win-selected);
+	--jd-color-button-background-hover: var(--win-hover);
+	--jd-border-radius-default: 0;
+	--jd-font-default: 'Segoe UI', 'Open Sans', 'Helvetica Neue', arial, sans-serif;
+	--jd-font-size-default: 13px;
+
+	// Toolbar: flat white bar without the ruled rows
+	.jodit-toolbar__box:not(:empty) {
+		border-bottom-color: var(--win-line);
+		border-radius: 0;
+		background: #fff;
+
+		.jodit-toolbar-editor-collection::after {
+			display: none;
+		}
+	}
+
+	.jodit-toolbar-collection,
+	.jodit-toolbar-editor-collection {
+		&_mode_horizontal {
+			background-image: none;
+		}
+	}
+
+	.jodit-ui-separator,
+	.jodit-ui-group_separated_true:not(
+			:last-child,
+			.jodit-ui-group_before-spacer_true
+		)::after {
+		border-right-color: var(--win-line);
+	}
+
+	.jodit-ui-break {
+		border-top-color: transparent;
+	}
+
+	// Buttons: flat and square, light blue on hover, deeper blue when pressed
+	.jodit-toolbar-button,
+	.jodit-toolbar-select,
+	.jodit-ui-button {
+		border-radius: 0;
+		color: var(--win-icon);
+
+		svg,
+		.jodit-icon {
+			fill: var(--win-icon);
+		}
+
+		&__text {
+			color: var(--win-text);
+		}
+	}
+
+	.jodit-toolbar-button:hover:not([disabled]),
+	.jodit-toolbar-select:hover:not([disabled]) {
+		border-color: var(--win-hover-border);
+	}
+
+	.jodit-toolbar-button:has(> [aria-pressed='true']:not([disabled])) {
+		border-color: var(--win-selected-border);
+	}
+
+	.jodit-toolbar-button__button,
+	.jodit-toolbar-button__trigger,
+	.jodit-toolbar-select__button,
+	.jodit-toolbar-select__trigger,
+	.jodit-ui-button:not([class*='_variant_']),
+	.jodit-ui-button_variant_initial {
+		border-radius: 0;
+
+		&:hover:not([disabled]),
+		&:focus-visible:not([disabled]) {
+			background: var(--win-hover);
+		}
+
+		&:active:not([disabled]),
+		&[aria-pressed='true']:not([disabled]) {
+			background: var(--win-selected);
+		}
+
+		&[aria-pressed='true']:hover:not([disabled]) {
+			background: #b8deff;
+		}
+	}
+
+	.jodit-toolbar-button_with-trigger_true:hover:not([disabled]) {
+		.jodit-toolbar-button__trigger {
+			border-left: 1px solid var(--win-hover-border);
+			opacity: 1;
+		}
+	}
+
+	.jodit-toolbar-button:focus-visible,
+	.jodit-toolbar-button__button:focus-visible {
+		outline: 1px dotted var(--win-text);
+		outline-offset: -3px;
+	}
+
+	// Tabs (image and link popups): the active tab paints its label white in
+	// Jodit; keep the label transparent over the theme button background
+	.jodit-tabs .jodit-tabs__buttons .jodit-ui-button {
+		&:active:not([disabled]),
+		&[aria-pressed='true']:not([disabled]) {
+			.jodit-ui-button__text {
+				background: transparent;
+			}
+		}
+	}
+
+	// Dialog buttons: Windows 10 push buttons, blue frame on hover and focus
+	.jodit-dialog__footer .jodit-ui-button,
+	.jodit-ui-button_variant_default,
+	.jodit-ui-button_variant_secondary,
+	.jodit-ui-button_variant_primary {
+		min-width: 88px;
+		border: 1px solid #adadad;
+		border-radius: 0;
+		background: #e1e1e1;
+		color: #000;
+
+		svg {
+			fill: #000;
+			stroke: #000;
+		}
+
+		&:focus-visible:not([disabled]) {
+			background: #e1e1e1;
+		}
+
+		&:hover:not([disabled]) {
+			border-color: var(--win-accent);
+			background: #e5f1fb;
+			color: #000;
+		}
+
+		&:active:not([disabled]),
+		&[aria-pressed='true']:not([disabled]) {
+			border-color: #005499;
+			background: #cce4f7;
+			color: #000;
+		}
+	}
+
+	.jodit-ui-button_variant_primary,
+	.jodit-dialog__footer .jodit-ui-button:focus:not([disabled]) {
+		border-color: var(--win-accent);
+		box-shadow: inset 0 0 0 1px var(--win-accent);
+		outline: 0;
+	}
+
+	// Editing surface
+	&.jodit-container {
+		border-color: var(--win-frame);
+		border-radius: 0;
+		background-color: #fff;
+	}
+
+	&.jodit-container:not(.jodit_inline) .jodit-workplace {
+		border-color: #fff;
+	}
+
+	.jodit-wysiwyg,
+	.jodit-wysiwyg_iframe {
+		background-color: #fff;
+	}
+
+	// Status bar: white with a hairline, grey text
+	.jodit-status-bar {
+		height: 22px;
+		border-radius: 0;
+		background: #fff;
+		color: var(--win-muted);
+		text-transform: none;
+
+		&:not(:empty) {
+			border-top-color: var(--win-line);
+		}
+
+		&,
+		.jodit-status-bar__item,
+		.jodit-status-bar__item > span,
+		.jodit-status-bar__item a,
+		a.jodit-status-bar-link {
+			&,
+			&:hover,
+			&:visited {
+				color: var(--win-muted);
+			}
+		}
+
+		.jodit-status-bar__item a:hover {
+			background: var(--win-hover);
+		}
+	}
+
+	// Popups and menus: Windows 10 context menu
+	.jodit-popup,
+	&.jodit-popup,
+	&.jodit-context-menu {
+		border: 1px solid #a0a0a0;
+		border-radius: 0;
+		box-shadow: 2px 2px 3px rgb(0 0 0 / 25%);
+	}
+
+	.jodit-popup__content,
+	&.jodit-popup .jodit-popup__content,
+	&.jodit-context-menu,
+	&.jodit-context-menu [class*='__content'] {
+		background: var(--win-menu);
+	}
+
+	.jodit-toolbar-collection_mode_vertical,
+	.jodit-toolbar-editor-collection_mode_vertical {
+		.jodit-toolbar-button {
+			border-color: transparent;
+		}
+
+		.jodit-toolbar-button__button {
+			&:hover:not([disabled]) {
+				background: var(--win-menu-hover);
+			}
+
+			&[aria-pressed='true']:not([disabled]) {
+				background: var(--win-selected);
+			}
+		}
+	}
+
+	&.jodit-context-menu .jodit-ui-button:hover:not([disabled]) {
+		background: var(--win-menu-hover);
+	}
+
+	// Form fields: grey frame, black on hover, blue when focused
+	.jodit-input,
+	.jodit-select,
+	.jodit-ui-input__wrapper,
+	.jodit-form input[type='text'],
+	.jodit-form input[type='url'],
+	.jodit-form textarea {
+		border-color: var(--win-field-border);
+		border-radius: 0;
+		background-color: #fff;
+
+		&:hover {
+			border-color: #171717;
+		}
+
+		&:focus {
+			border-color: var(--win-accent);
+			box-shadow: none;
+			outline: 0;
+		}
+	}
+
+	// Dialog window: white title bar, thin blue frame, red close button
+	&.jodit-dialog {
+		.jodit-dialog__panel {
+			border: 1px solid var(--win-frame);
+			border-radius: 0;
+			background-color: #fff;
+			box-shadow: 0 7px 25px rgb(0 0 0 / 30%);
+		}
+
+		.jodit-dialog__header {
+			min-height: 32px;
+			border-bottom-color: var(--win-line);
+			background: #fff;
+		}
+
+		.jodit-dialog__header-title {
+			color: var(--win-text);
+			font-size: 13px;
+			font-weight: normal;
+		}
+
+		.jodit-dialog__header-toolbar [class*='_close'] .jodit-toolbar-button__button:hover:not([disabled]) {
+			background: #e81123;
+
+			svg {
+				fill: #fff;
+				stroke: #fff;
+			}
+		}
+
+		.jodit-dialog__footer {
+			border-top: 1px solid var(--win-line);
+			background: #f0f0f0;
+		}
+	}
+}

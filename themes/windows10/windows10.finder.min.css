@@ -1,0 +1,155 @@
+/*!
+ * jodit-ui-themes: Windows 10 theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+){--win-frame:#9fc0ea;--win-line:#e5e5e5;--win-text:#1a1a1a;--win-muted:#6d6d6d;--win-hover:#e5f3ff;--win-selected:#cce8ff;--win-selected-border:#99d1ff;--win-scrollbar:#c2c2c2;--win-folder-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 1.5h5l1.5 1.5H15v10H1z' fill='%23e0a838'/%3E%3Cpath d='M1 4.5h14V13H1z' fill='%23ffd35c'/%3E%3C/svg%3E")}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree{--jd-color-background-filebrowser-folders:#fff;--jd-color-folder-title:var(--win-text);padding-top:4px;border-right:1px solid var(--win-line);background:#fff}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree::-webkit-scrollbar-track{box-shadow:none}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree::-webkit-scrollbar-thumb{background-color:var(--win-scrollbar);outline:0}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree__item{min-height:24px;padding:1px 6px;border:1px solid transparent;margin:0 4px;border-bottom:1px solid transparent;color:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree__item-title{display:flex;align-items:center;color:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree__item-title::before{width:16px;height:14px;flex:none;margin-right:6px;background:var(--win-folder-icon) no-repeat center/contain;content:''}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree__item:hover{border-color:var(--win-hover);background:var(--win-hover)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree__item:hover .jodit-file-browser-tree__item-title{color:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree__item .jodit-ui-button svg{fill:var(--win-muted);stroke:var(--win-muted)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree__source-title{padding:4px 10px;border-bottom:1px solid var(--win-line);background:#fff;color:var(--win-muted);font-weight:600}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-tree__plus{margin:6px 4px}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files{background:#fff}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files::-webkit-scrollbar-thumb{background-color:var(--win-scrollbar)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files__item{border-color:transparent;border-radius:0;text-decoration:none}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files__item:hover{border-color:var(--win-hover);background:var(--win-hover)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files__item_active_true,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files__item_active_true:hover{border-color:var(--win-selected-border);background:var(--win-selected)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files__item_active_true .jodit-file-browser-files__item-info,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files__item_active_true:hover .jodit-file-browser-files__item-info{background-color:transparent;color:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item{height:auto;min-height:var(--jd-col-size);flex-direction:column;justify-content:flex-start;padding:6px 6px 4px}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item img{max-height:calc(var(--jd-col-size) - 56px);margin:auto 0}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info{position:static;width:100%;padding:4px 0 0;background:0 0;color:var(--win-text);opacity:1;text-align:center;text-shadow:none}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info>span{color:var(--win-muted);font-size:11px;line-height:15px}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info>.jodit-file-browser-files__item-info-filename{color:var(--win-text);font-size:12px;font-weight:400}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_list a{border-color:transparent}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_list a:hover{border-color:var(--win-hover);background:var(--win-hover)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_list a:hover .jodit-file-browser-files__item-info{color:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_list a .jodit-file-browser-files__item-info>span{color:var(--win-muted);font-weight:400}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-files_view_list a .jodit-file-browser-files__item-info>.jodit-file-browser-files__item-info-filename{color:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-preview__navigation svg{fill:var(--win-muted)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-preview__navigation:hover svg{fill:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+).jodit-file-browser-pro{font-family:var(--jd-font-default)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-pro__panel{border:1px solid var(--win-frame);border-radius:0;box-shadow:0 7px 25px rgba(0,0,0,.3)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-pro__header{min-height:40px;border-bottom-color:var(--win-line);background:#fff}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-pro__header-title,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-pro__header-toolbar{line-height:38px}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-pro__header-toolbar [class*='_close'] .jodit-toolbar-button__button:hover:not([disabled]){background:#e81123}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-pro__header-toolbar [class*='_close'] .jodit-toolbar-button__button:hover:not([disabled]) svg{fill:#fff;stroke:#fff}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-file-browser-pro__resizer svg{fill:var(--win-muted)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-panel{--jd-fb-color:var(--win-text);--jd-files-bg:#fff;--jd-item-bg:transparent;--jd-item-bg-hover:var(--win-hover);--jd-item-border-color:transparent;--jd-item-border-selected-color:var(--win-selected-border);--jd-item-border-bg-selected-color:var(--win-selected);--jd-item-info-color:var(--win-text);--jd-item-info-bg:transparent;--jd-sidebar-bg:#fff;--jd-sidebar-color:var(--win-text);--jd-sidebar-border-color:var(--win-line);--jd-sidebar-hide-btn-bg:#fff;--jd-folder-bg:var(--win-hover);--jd-folder-border:var(--win-hover);--jd-source-bg:#fff;--jd-source-border:var(--win-line);--jd-message-bg:#fffffff0;--jd-message-color:var(--win-text);--jd-message-shadow-color:#a0a0a0}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-sidebar__box::-webkit-scrollbar-track,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-virtual-scroll::-webkit-scrollbar-track{box-shadow:none}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-sidebar__box::-webkit-scrollbar-thumb,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-virtual-scroll::-webkit-scrollbar-thumb{background-color:var(--win-scrollbar);outline:0}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-sidebar{background:#fff}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-source__name{height:auto;padding:6px 10px;background:#fff;color:var(--win-muted);font-weight:600}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-folder{padding:2px 6px;border:1px solid transparent;margin:0 4px;color:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-folder:hover{border-color:var(--win-hover);background:var(--win-hover)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-folder_active_true,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-folder_active_true:hover{border-color:var(--win-selected-border);background:var(--win-selected)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-folder__icon-wrapper{background:var(--win-folder-icon) no-repeat center/contain}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-folder__icon-wrapper svg{display:none}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-folder__arrow svg{fill:var(--win-muted)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item{border:1px solid transparent;border-radius:0}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item:hover{border-color:var(--win-hover);background:var(--win-hover)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_active_true,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_active_true:hover{border-color:var(--win-selected-border);background:var(--win-selected);outline:0}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item__name{font-weight:400}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_view_tiles:not(
+.jodit-ui-browser-item_size_small,.jodit-ui-browser-item_size_xsmall
+){display:flex;height:auto;flex-direction:column;padding:6px 6px 4px}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_view_tiles:not(
+.jodit-ui-browser-item_size_small,.jodit-ui-browser-item_size_xsmall
+) .jodit-ui-browser-item__image{width:100%;height:calc(var(--jd-item-size) - 40px)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_view_tiles:not(
+.jodit-ui-browser-item_size_small,.jodit-ui-browser-item_size_xsmall
+) .jodit-ui-browser-item__info,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_view_tiles:not(
+.jodit-ui-browser-item_size_small,.jodit-ui-browser-item_size_xsmall
+).jodit-ui-browser-item.jodit-ui-browser-item_view_tiles:hover .jodit-ui-browser-item__info{position:static;padding:4px 0 0;background:0 0;opacity:1;text-align:center}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_view_tiles:not(
+.jodit-ui-browser-item_size_small,.jodit-ui-browser-item_size_xsmall
+) .jodit-ui-browser-item__name{font-size:12px}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_view_tiles:not(
+.jodit-ui-browser-item_size_small,.jodit-ui-browser-item_size_xsmall
+) .jodit-ui-browser-item__filesize,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-item_view_tiles:not(
+.jodit-ui-browser-item_size_small,.jodit-ui-browser-item_size_xsmall
+) .jodit-ui-browser-item__time{color:var(--win-muted);font-size:11px}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-status-bar{border-top-color:var(--win-line);background:#fff;color:var(--win-muted)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-status-bar [class*='__slot-']{opacity:1}

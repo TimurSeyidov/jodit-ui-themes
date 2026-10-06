@@ -1,0 +1,386 @@
+/*!
+ * jodit-ui-themes: Windows 10 theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Windows 10 theme, file browser part: Windows 10 Explorer look for the free
+// Jodit file browser and the Jodit PRO finder. Buttons, inputs and menus
+// inside the file browsers come from the editor part (windows10.editor.css).
+
+// Usage: load the stylesheet after the Jodit styles and set
+// `theme: 'windows10'`. Jodit names its custom properties `--jd-*` in the
+// built CSS, so the theme overrides them by those names.
+//
+// The theme class lands on the editor container and popups
+// (`jodit_theme_windows10`), on dialogs (`jodit-dialog_theme_windows10`)
+// and on the Jodit PRO finder window (`jodit-file-browser-pro_theme_windows10`).
+
+:is(
+		.jodit_theme_windows10,
+		.jodit-dialog_theme_windows10,
+		.jodit-file-browser-pro_theme_windows10
+	) {
+	--win-frame: #9fc0ea;
+	--win-line: #e5e5e5;
+	--win-text: #1a1a1a;
+	--win-muted: #6d6d6d;
+	--win-hover: #e5f3ff;
+	--win-selected: #cce8ff;
+	--win-selected-border: #99d1ff;
+	--win-scrollbar: #c2c2c2;
+	--win-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 1.5h5l1.5 1.5H15v10H1z' fill='%23e0a838'/%3E%3Cpath d='M1 4.5h14V13H1z' fill='%23ffd35c'/%3E%3C/svg%3E");
+
+	// Free Jodit file browser
+	.jodit-file-browser-tree {
+		--jd-color-background-filebrowser-folders: #fff;
+		--jd-color-folder-title: var(--win-text);
+
+		padding-top: 4px;
+		border-right: 1px solid var(--win-line);
+		background: #fff;
+
+		&::-webkit-scrollbar-track {
+			box-shadow: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--win-scrollbar);
+			outline: 0;
+		}
+
+		&__item {
+			min-height: 24px;
+			padding: 1px 6px;
+			border: 1px solid transparent;
+			margin: 0 4px;
+			border-bottom: 1px solid transparent;
+			color: var(--win-text);
+
+			&-title {
+				display: flex;
+				align-items: center;
+				color: var(--win-text);
+
+				&::before {
+					width: 16px;
+					height: 14px;
+					flex: none;
+					margin-right: 6px;
+					background: var(--win-folder-icon) no-repeat center / contain;
+					content: '';
+				}
+			}
+
+			&:hover {
+				border-color: var(--win-hover);
+				background: var(--win-hover);
+			}
+
+			&:hover .jodit-file-browser-tree__item-title {
+				color: var(--win-text);
+			}
+
+			.jodit-ui-button svg {
+				fill: var(--win-muted);
+				stroke: var(--win-muted);
+			}
+		}
+
+		&__source-title {
+			padding: 4px 10px;
+			border-bottom: 1px solid var(--win-line);
+			background: #fff;
+			color: var(--win-muted);
+			font-weight: 600;
+		}
+
+		&__plus {
+			margin: 6px 4px;
+		}
+	}
+
+	.jodit-file-browser-files {
+		background: #fff;
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--win-scrollbar);
+		}
+
+		&__item {
+			border-color: transparent;
+			border-radius: 0;
+			text-decoration: none;
+
+			&:hover {
+				border-color: var(--win-hover);
+				background: var(--win-hover);
+			}
+
+			&_active_true,
+			&_active_true:hover {
+				border-color: var(--win-selected-border);
+				background: var(--win-selected);
+
+				.jodit-file-browser-files__item-info {
+					background-color: transparent;
+					color: var(--win-text);
+				}
+			}
+		}
+
+		// Tiles: "Large icons" view, picture with a caption underneath
+		&_view_tiles .jodit-file-browser-files__item {
+			height: auto;
+			min-height: var(--jd-col-size);
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: 6px 6px 4px;
+
+			img {
+				max-height: calc(var(--jd-col-size) - 56px);
+				margin: auto 0;
+			}
+
+			.jodit-file-browser-files__item-info {
+				position: static;
+				width: 100%;
+				padding: 4px 0 0;
+				background: transparent;
+				color: var(--win-text);
+				opacity: 1;
+				text-align: center;
+				text-shadow: none;
+
+				> span {
+					color: var(--win-muted);
+					font-size: 11px;
+					line-height: 15px;
+				}
+
+				> .jodit-file-browser-files__item-info-filename {
+					color: var(--win-text);
+					font-size: 12px;
+					font-weight: normal;
+				}
+			}
+		}
+
+		// List: "Details" view with grey secondary columns
+		&_view_list a {
+			border-color: transparent;
+
+			&:hover {
+				border-color: var(--win-hover);
+				background: var(--win-hover);
+
+				.jodit-file-browser-files__item-info {
+					color: var(--win-text);
+				}
+			}
+
+			.jodit-file-browser-files__item-info > span {
+				color: var(--win-muted);
+				font-weight: normal;
+			}
+
+			.jodit-file-browser-files__item-info > .jodit-file-browser-files__item-info-filename {
+				color: var(--win-text);
+			}
+		}
+	}
+
+	.jodit-file-browser-preview__navigation {
+		svg {
+			fill: var(--win-muted);
+		}
+
+		&:hover svg {
+			fill: var(--win-text);
+		}
+	}
+
+	// Jodit PRO finder
+	&.jodit-file-browser-pro {
+		font-family: var(--jd-font-default);
+	}
+
+	.jodit-file-browser-pro__panel {
+		border: 1px solid var(--win-frame);
+		border-radius: 0;
+		box-shadow: 0 7px 25px rgb(0 0 0 / 30%);
+	}
+
+	.jodit-file-browser-pro__header {
+		min-height: 40px;
+		border-bottom-color: var(--win-line);
+		background: #fff;
+	}
+
+	.jodit-file-browser-pro__header-title,
+	.jodit-file-browser-pro__header-toolbar {
+		line-height: 38px;
+	}
+
+	.jodit-file-browser-pro__header-toolbar [class*='_close'] .jodit-toolbar-button__button:hover:not([disabled]) {
+		background: #e81123;
+
+		svg {
+			fill: #fff;
+			stroke: #fff;
+		}
+	}
+
+	.jodit-file-browser-pro__resizer svg {
+		fill: var(--win-muted);
+	}
+
+	// Explorer palette for the finder's own tokens
+	.jodit-ui-browser-panel {
+		--jd-fb-color: var(--win-text);
+		--jd-files-bg: #fff;
+		--jd-item-bg: transparent;
+		--jd-item-bg-hover: var(--win-hover);
+		--jd-item-border-color: transparent;
+		--jd-item-border-selected-color: var(--win-selected-border);
+		--jd-item-border-bg-selected-color: var(--win-selected);
+		--jd-item-info-color: var(--win-text);
+		--jd-item-info-bg: transparent;
+		--jd-sidebar-bg: #fff;
+		--jd-sidebar-color: var(--win-text);
+		--jd-sidebar-border-color: var(--win-line);
+		--jd-sidebar-hide-btn-bg: #fff;
+		--jd-folder-bg: var(--win-hover);
+		--jd-folder-border: var(--win-hover);
+		--jd-source-bg: #fff;
+		--jd-source-border: var(--win-line);
+		--jd-message-bg: #fffffff0;
+		--jd-message-color: var(--win-text);
+		--jd-message-shadow-color: #a0a0a0;
+	}
+
+	.jodit-ui-sidebar__box,
+	.jodit-ui-virtual-scroll {
+		&::-webkit-scrollbar-track {
+			box-shadow: none;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--win-scrollbar);
+			outline: 0;
+		}
+	}
+
+	// Navigation pane
+	.jodit-ui-sidebar {
+		background: #fff;
+	}
+
+	.jodit-ui-browser-source__name {
+		height: auto;
+		padding: 6px 10px;
+		background: #fff;
+		color: var(--win-muted);
+		font-weight: 600;
+	}
+
+	.jodit-ui-browser-folder {
+		padding: 2px 6px;
+		border: 1px solid transparent;
+		margin: 0 4px;
+		color: var(--win-text);
+
+		&:hover {
+			border-color: var(--win-hover);
+			background: var(--win-hover);
+		}
+
+		&_active_true,
+		&_active_true:hover {
+			border-color: var(--win-selected-border);
+			background: var(--win-selected);
+		}
+
+		&__icon-wrapper {
+			background: var(--win-folder-icon) no-repeat center / contain;
+
+			svg {
+				display: none;
+			}
+		}
+
+		&__arrow svg {
+			fill: var(--win-muted);
+		}
+	}
+
+	// Files: Explorer selection colors
+	.jodit-ui-browser-item {
+		border: 1px solid transparent;
+		border-radius: 0;
+
+		&:hover {
+			border-color: var(--win-hover);
+			background: var(--win-hover);
+		}
+
+		&_active_true,
+		&_active_true:hover {
+			border-color: var(--win-selected-border);
+			background: var(--win-selected);
+			outline: 0;
+		}
+
+		&__name {
+			font-weight: normal;
+		}
+	}
+
+	// Large tiles: picture with a caption underneath instead of an overlay
+	.jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) {
+		display: flex;
+		height: auto;
+		flex-direction: column;
+		padding: 6px 6px 4px;
+
+		.jodit-ui-browser-item__image {
+			width: 100%;
+			height: calc(var(--jd-item-size) - 40px);
+		}
+
+		// Outweighs the PRO rule that hides the caption on hover
+		.jodit-ui-browser-item__info,
+		&.jodit-ui-browser-item.jodit-ui-browser-item_view_tiles:hover
+			.jodit-ui-browser-item__info {
+			position: static;
+			padding: 4px 0 0;
+			background: transparent;
+			opacity: 1;
+			text-align: center;
+		}
+
+		.jodit-ui-browser-item__name {
+			font-size: 12px;
+		}
+
+		.jodit-ui-browser-item__time,
+		.jodit-ui-browser-item__filesize {
+			color: var(--win-muted);
+			font-size: 11px;
+		}
+	}
+
+	// Status bar
+	.jodit-ui-browser-status-bar {
+		border-top-color: var(--win-line);
+		background: #fff;
+		color: var(--win-muted);
+
+		[class*='__slot-'] {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+/*!
+ * jodit-ui-themes: macOS theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// macOS theme, everything: the editor and both file browsers.
+
+// Usage: load the stylesheet after the Jodit styles and set
+// `theme: 'macos'`. Palette and theme-specific rules: _theme.less.
+
+@import (reference) '../_base/tokens.less';
+@import (reference) '../_base/editor.less';
+@import (reference) '../_base/finder.less';
+@import (reference) '_theme.less';
+
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) {
+	.jui-defaults();
+	.theme-tokens();
+	.jui-editor();
+	.theme-editor();
+	.jui-finder();
+	.theme-finder();
+}

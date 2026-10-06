@@ -1,0 +1,27 @@
+/*!
+ * jodit-ui-themes: Nord theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Nord theme, file browser part: the free Jodit file browser and the
+// Jodit PRO finder. Buttons, inputs and menus inside the file browsers come
+// from the editor part (nord.editor.css).
+
+// Usage: load the stylesheet after the Jodit styles and set
+// `theme: 'nord'`. Palette and theme-specific rules: _theme.less.
+
+@import (reference) '../_base/tokens.less';
+@import (reference) '../_base/finder.less';
+@import (reference) '_theme.less';
+
+:is(
+		.jodit_theme_nord,
+		.jodit-dialog_theme_nord,
+		.jodit-file-browser-pro_theme_nord
+	) {
+	.jui-defaults();
+	.theme-tokens();
+	.jui-finder();
+	.theme-finder();
+}

@@ -1,0 +1,1962 @@
+/*!
+ * jodit-ui-themes: macOS theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) {
+  --ui-font: system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif;
+  --ui-font-size: 13px;
+  --ui-text: #1f1f1f;
+  --ui-muted: #6b6b6b;
+  --ui-icon: var(--ui-text);
+  --ui-accent: #0067c0;
+  --ui-link: var(--ui-accent);
+  --ui-selection: #b4d7ff;
+  --ui-surface-alt: #f3f3f3;
+  --ui-content-bg: #fff;
+  --ui-content-text: var(--ui-text);
+  --ui-line: #e0e0e0;
+  --ui-frame: #d1d1d1;
+  --ui-radius: 0;
+  --ui-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --ui-toolbar-bg: var(--ui-surface);
+  --ui-toolbar-border: var(--ui-line);
+  --ui-btn-radius: 4px;
+  --ui-hover-bg: #ebebeb;
+  --ui-hover-border: transparent;
+  --ui-pressed-bg: #dcdcdc;
+  --ui-pressed-border: transparent;
+  --ui-pressed-hover-bg: var(--ui-pressed-bg);
+  --ui-pressed-icon: var(--ui-icon);
+  --ui-status-bg: var(--ui-toolbar-bg);
+  --ui-status-text: var(--ui-muted);
+  --ui-menu-bg: var(--ui-surface);
+  --ui-menu-border: var(--ui-line);
+  --ui-menu-radius: 4px;
+  --ui-menu-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --ui-menu-hover-bg: var(--ui-hover-bg);
+  --ui-menu-hover-text: var(--ui-text);
+  --ui-field-bg: var(--ui-surface);
+  --ui-field-text: var(--ui-text);
+  --ui-field-border: #c8c8c8;
+  --ui-field-hover-border: #a0a0a0;
+  --ui-field-focus-border: var(--ui-accent);
+  --ui-field-focus-ring: none;
+  --ui-field-radius: 4px;
+  --ui-push-bg: var(--ui-surface);
+  --ui-push-text: var(--ui-text);
+  --ui-push-border: var(--ui-field-border);
+  --ui-push-hover-bg: var(--ui-hover-bg);
+  --ui-push-hover-border: var(--ui-push-border);
+  --ui-push-active-bg: var(--ui-pressed-bg);
+  --ui-push-radius: var(--ui-btn-radius);
+  --ui-push-shadow: none;
+  --ui-primary-bg: var(--ui-accent);
+  --ui-primary-text: #fff;
+  --ui-primary-border: var(--ui-primary-bg);
+  --ui-primary-hover-bg: var(--ui-primary-bg);
+  --ui-dialog-border: var(--ui-frame);
+  --ui-dialog-radius: var(--ui-radius);
+  --ui-dialog-header-bg: var(--ui-surface);
+  --ui-dialog-header-border: var(--ui-line);
+  --ui-dialog-title: var(--ui-text);
+  --ui-dialog-title-size: 14px;
+  --ui-dialog-title-weight: 600;
+  --ui-dialog-footer-bg: var(--ui-surface-alt);
+  --ui-close-hover-bg: #c42b1c;
+  --ui-close-hover-icon: #fff;
+  --ui-pane-bg: var(--ui-surface-alt);
+  --ui-pane-text: var(--ui-text);
+  --ui-pane-border: var(--ui-line);
+  --ui-source-bg: var(--ui-pane-bg);
+  --ui-source-text: var(--ui-muted);
+  --ui-files-bg: var(--ui-content-bg);
+  --ui-item-radius: 4px;
+  --ui-item-hover-bg: var(--ui-hover-bg);
+  --ui-item-hover-border: transparent;
+  --ui-item-selected-bg: var(--ui-pressed-bg);
+  --ui-item-selected-border: transparent;
+  --ui-item-selected-text: var(--ui-text);
+  --ui-thumb-radius: 4px;
+  --ui-thumb-border: 0;
+  --ui-thumb-shadow: none;
+  --ui-scrollbar: #c2c2c2;
+  --ui-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 1.5h5l1.5 1.5H15v10H1z' fill='%23e0a838'/%3E%3Cpath d='M1 4.5h14V13H1z' fill='%23ffd35c'/%3E%3C/svg%3E");
+  --ui-font: -apple-system, blinkmacsystemfont, 'SF Pro Text', 'Helvetica Neue', arial, sans-serif;
+  --ui-text: #262626;
+  --ui-muted: #808080;
+  --ui-icon: #4a4a4a;
+  --ui-accent: #007aff;
+  --ui-selection: #b3d7ff;
+  --ui-surface: #fff;
+  --ui-surface-alt: #f5f5f5;
+  --ui-line: #e3e3e3;
+  --ui-frame: #d0d0d0;
+  --ui-radius: 10px;
+  --ui-shadow: 0 20px 50px rgba(0, 0, 0, 0.25), 0 0 0 0.5px rgba(0, 0, 0, 0.15);
+  --ui-toolbar-bg: #f6f6f6;
+  --ui-toolbar-border: #dedede;
+  --ui-btn-radius: 6px;
+  --ui-hover-bg: #e6e6e6;
+  --ui-pressed-bg: #d9d9d9;
+  --ui-pressed-hover-bg: #cfcfcf;
+  --ui-menu-bg: rgba(246, 246, 246, 0.97);
+  --ui-menu-border: #d4d4d4;
+  --ui-menu-radius: 8px;
+  --ui-menu-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  --ui-menu-hover-bg: #007aff;
+  --ui-menu-hover-text: #fff;
+  --ui-field-border: #c9c9c9;
+  --ui-field-radius: 6px;
+  --ui-field-focus-ring: 0 0 0 3px rgba(0, 122, 255, 0.3);
+  --ui-push-border: #c9c9c9;
+  --ui-push-radius: 6px;
+  --ui-push-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.15);
+  --ui-push-hover-bg: #f7f7f7;
+  --ui-push-active-bg: #e8e8e8;
+  --ui-primary-hover-bg: #0a6fe6;
+  --ui-dialog-radius: 12px;
+  --ui-dialog-header-bg: #f6f6f6;
+  --ui-dialog-title-size: 13px;
+  --ui-dialog-footer-bg: #fff;
+  --ui-close-hover-bg: #ff5f57;
+  --ui-close-hover-icon: #4d0000;
+  --ui-pane-bg: #efeff1;
+  --ui-source-text: #8a8a8e;
+  --ui-item-radius: 6px;
+  --ui-item-hover-bg: #ececec;
+  --ui-item-selected-bg: #dcdcdc;
+  --ui-thumb-radius: 6px;
+  --ui-thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --ui-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 2.5C1 1.7 1.7 1 2.5 1h3.6l1.6 1.6h5.8c.8 0 1.5.7 1.5 1.5v7.4c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%234a9be3'/%3E%3Cpath d='M1 5h14v6.5c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%2379bcf3'/%3E%3C/svg%3E");
+  --jd-color-border: var(--ui-line);
+  --jd-color-separator: var(--ui-line);
+  --jd-color-panel: var(--ui-surface);
+  --jd-color-text: var(--ui-text);
+  --jd-color-text-icons: var(--ui-icon);
+  --jd-color-icon: var(--ui-icon);
+  --jd-color-label: var(--ui-muted);
+  --jd-color-placeholder: var(--ui-muted);
+  --jd-color-white: var(--ui-field-bg);
+  --jd-color-gray: var(--ui-field-border);
+  --jd-color-background-default: var(--ui-surface);
+  --jd-color-background-light-gray: var(--ui-surface-alt);
+  --jd-color-background-gray: var(--ui-surface-alt);
+  --jd-color-background-gray-hover: var(--ui-hover-bg);
+  --jd-color-background-button-hover: var(--ui-hover-bg);
+  --jd-color-button-background-hover: var(--ui-hover-bg);
+  --jd-color-button-background-hover-opacity40: var(--ui-pressed-bg);
+  --jd-color-button-background-hover-opacity60: var(--ui-pressed-hover-bg);
+  --jd-color-background-selection: var(--ui-selection);
+  --jd-border-radius-default: var(--ui-btn-radius);
+  --jd-font-default: var(--ui-font);
+  --jd-font-size-default: var(--ui-font-size);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar__box:not(:empty) {
+  border-bottom-color: var(--ui-toolbar-border);
+  background: var(--ui-toolbar-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar__box:not(:empty) .jodit-toolbar-editor-collection::after {
+  display: none;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-collection_mode_horizontal,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-editor-collection_mode_horizontal {
+  background-image: none;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-separator,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-group_separated_true:not(
+			:last-child,
+			.jodit-ui-group_before-spacer_true
+		)::after {
+  border-right-color: var(--ui-line);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-break {
+  border-top-color: transparent;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button {
+  border-radius: var(--ui-btn-radius);
+  color: var(--ui-icon);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button .jodit-icon,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select .jodit-icon,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button .jodit-icon {
+  fill: var(--ui-icon);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__text,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__text,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button__text {
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select:hover:not([disabled]) {
+  border-color: var(--ui-hover-border);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button:has( > [aria-pressed='true']:not([disabled])) {
+  border-color: var(--ui-pressed-border);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__trigger:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__button:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__trigger:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button:not([class*='_variant_']):hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_initial:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__trigger:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__button:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__trigger:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button:not([class*='_variant_']):focus-visible:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_initial:focus-visible:not([disabled]) {
+  background: var(--ui-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__trigger:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__button:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__trigger:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button:not([class*='_variant_']):active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_initial:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__trigger[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__button[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__trigger[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button:not([class*='_variant_'])[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_initial[aria-pressed='true']:not([disabled]) {
+  background: var(--ui-pressed-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button:active:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__trigger:active:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__button:active:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__trigger:active:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button:not([class*='_variant_']):active:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_initial:active:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button[aria-pressed='true']:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__trigger[aria-pressed='true']:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__button[aria-pressed='true']:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__trigger[aria-pressed='true']:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button:not([class*='_variant_'])[aria-pressed='true']:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_initial[aria-pressed='true']:not([disabled]) svg {
+  fill: var(--ui-pressed-icon);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__trigger[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__button[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-select__trigger[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button:not([class*='_variant_'])[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_initial[aria-pressed='true']:hover:not([disabled]) {
+  background: var(--ui-pressed-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button {
+  border-radius: var(--ui-btn-radius);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button_with-trigger_true .jodit-toolbar-button__button {
+  border-radius: var(--ui-btn-radius) 0 0 var(--ui-btn-radius);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button_with-trigger_true .jodit-toolbar-button__trigger {
+  border-radius: 0 var(--ui-btn-radius) var(--ui-btn-radius) 0;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button_with-trigger_true:hover:not([disabled]) .jodit-toolbar-button__trigger {
+  opacity: 1;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button:focus-visible,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-button__button:focus-visible {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: -2px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-tabs .jodit-tabs__buttons .jodit-ui-button:active:not([disabled]) .jodit-ui-button__text,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-tabs .jodit-tabs__buttons .jodit-ui-button[aria-pressed='true']:not([disabled]) .jodit-ui-button__text {
+  background: transparent;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-dialog__footer .jodit-ui-button,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_default,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_secondary {
+  border: 1px solid var(--ui-push-border);
+  border-radius: var(--ui-push-radius);
+  background: var(--ui-push-bg);
+  box-shadow: var(--ui-push-shadow);
+  color: var(--ui-push-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-dialog__footer .jodit-ui-button svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_default svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_secondary svg {
+  fill: var(--ui-push-text);
+  stroke: var(--ui-push-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-dialog__footer .jodit-ui-button .jodit-ui-button__text,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_default .jodit-ui-button__text,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_secondary .jodit-ui-button__text {
+  color: var(--ui-push-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-dialog__footer .jodit-ui-button:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_default:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_secondary:focus-visible:not([disabled]) {
+  background: var(--ui-push-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-dialog__footer .jodit-ui-button:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_default:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_secondary:hover:not([disabled]) {
+  border-color: var(--ui-push-hover-border);
+  background: var(--ui-push-hover-bg);
+  color: var(--ui-push-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-dialog__footer .jodit-ui-button:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_default:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_secondary:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-dialog__footer .jodit-ui-button[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_default[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_secondary[aria-pressed='true']:not([disabled]) {
+  background: var(--ui-push-active-bg);
+  color: var(--ui-push-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-dialog__footer .jodit-ui-button:focus:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_default:focus:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_secondary:focus:not([disabled]) {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: 1px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_primary {
+  border: 1px solid var(--ui-primary-border);
+  border-radius: var(--ui-push-radius);
+  background: var(--ui-primary-bg);
+  color: var(--ui-primary-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_primary svg {
+  fill: var(--ui-primary-text);
+  stroke: var(--ui-primary-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_primary .jodit-ui-button__text {
+  color: var(--ui-primary-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_primary:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_primary:active:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-button_variant_primary:focus-visible:not([disabled]) {
+  border-color: var(--ui-primary-hover-bg);
+  background: var(--ui-primary-hover-bg);
+  color: var(--ui-primary-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-container {
+  border-color: var(--ui-frame);
+  border-radius: var(--ui-radius);
+  background-color: var(--ui-content-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-container:not(.jodit_inline) .jodit-workplace {
+  border-color: var(--ui-content-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-container .jodit-toolbar__box:not(:empty) {
+  border-radius: var(--ui-radius) var(--ui-radius) 0 0;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-wysiwyg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-wysiwyg_iframe {
+  background-color: var(--ui-content-bg);
+  color: var(--ui-content-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-wysiwyg a {
+  color: var(--ui-link);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-placeholder {
+  color: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar {
+  height: 24px;
+  border-radius: 0 0 var(--ui-radius) var(--ui-radius);
+  background: var(--ui-status-bg);
+  color: var(--ui-status-text);
+  text-transform: none;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar:not(:empty) {
+  border-top-color: var(--ui-toolbar-border);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item > span,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item a,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar a.jodit-status-bar-link,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item > span:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item a:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar a.jodit-status-bar-link:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar:visited,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item:visited,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item > span:visited,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item a:visited,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar a.jodit-status-bar-link:visited {
+  color: var(--ui-status-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-status-bar .jodit-status-bar__item a:hover {
+  background: var(--ui-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-popup,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-context-menu {
+  overflow: hidden;
+  border: 1px solid var(--ui-menu-border);
+  border-radius: var(--ui-menu-radius);
+  box-shadow: var(--ui-menu-shadow);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-popup .jodit-popup__content,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-context-menu,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-context-menu [class*='__content'] {
+  background: var(--ui-menu-bg);
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-collection_mode_vertical .jodit-toolbar-button,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-editor-collection_mode_vertical .jodit-toolbar-button {
+  border-color: transparent;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-collection_mode_vertical .jodit-toolbar-button__button:hover:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-editor-collection_mode_vertical .jodit-toolbar-button__button:hover:not([disabled]) {
+  background: var(--ui-menu-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-collection_mode_vertical .jodit-toolbar-button__button:hover:not([disabled]) .jodit-toolbar-button__text,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-editor-collection_mode_vertical .jodit-toolbar-button__button:hover:not([disabled]) .jodit-toolbar-button__text {
+  color: var(--ui-menu-hover-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-collection_mode_vertical .jodit-toolbar-button__button:hover:not([disabled]) svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-editor-collection_mode_vertical .jodit-toolbar-button__button:hover:not([disabled]) svg {
+  fill: var(--ui-menu-hover-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-collection_mode_vertical .jodit-toolbar-button__button[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-toolbar-editor-collection_mode_vertical .jodit-toolbar-button__button[aria-pressed='true']:not([disabled]) {
+  background: var(--ui-pressed-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-context-menu .jodit-ui-button:hover:not([disabled]) {
+  background: var(--ui-menu-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-context-menu .jodit-ui-button:hover:not([disabled]) .jodit-ui-button__text {
+  color: var(--ui-menu-hover-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-context-menu .jodit-ui-button:hover:not([disabled]) svg {
+  fill: var(--ui-menu-hover-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-input,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-select,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-input__wrapper,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-select__wrapper,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-text-area__wrapper,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form input[type='text'],
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form input[type='url'],
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form textarea {
+  border-color: var(--ui-field-border);
+  border-radius: var(--ui-field-radius);
+  background-color: var(--ui-field-bg);
+  color: var(--ui-field-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-input:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-select:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-input__wrapper:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-select__wrapper:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-text-area__wrapper:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form input[type='text']:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form input[type='url']:hover,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form textarea:hover {
+  border-color: var(--ui-field-hover-border);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-input:focus,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-select:focus,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-input__wrapper:focus,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-select__wrapper:focus,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-text-area__wrapper:focus,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form input[type='text']:focus,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form input[type='url']:focus,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form textarea:focus,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-input:focus-within,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-select:focus-within,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-input__wrapper:focus-within,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-select__wrapper:focus-within,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-text-area__wrapper:focus-within,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form input[type='text']:focus-within,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form input[type='url']:focus-within,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-form textarea:focus-within {
+  border-color: var(--ui-field-focus-border);
+  box-shadow: var(--ui-field-focus-ring);
+  outline: 0;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-input__input,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-select__input,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-text-area__input {
+  background-color: transparent;
+  color: var(--ui-field-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-input__icon svg,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-input__clear svg {
+  fill: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-drag-and-drop__file-box,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit_uploadfile_button {
+  border-radius: var(--ui-field-radius);
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-dialog .jodit-dialog__panel {
+  overflow: hidden;
+  border: 1px solid var(--ui-dialog-border);
+  border-radius: var(--ui-dialog-radius);
+  background-color: var(--ui-surface);
+  box-shadow: var(--ui-shadow);
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-dialog .jodit-dialog__header {
+  min-height: 36px;
+  border-bottom-color: var(--ui-dialog-header-border);
+  background: var(--ui-dialog-header-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-dialog .jodit-dialog__header-title {
+  color: var(--ui-dialog-title);
+  font-size: var(--ui-dialog-title-size);
+  font-weight: var(--ui-dialog-title-weight);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-dialog .jodit-dialog__header-toolbar [class*='_close'] .jodit-toolbar-button__button:hover:not([disabled]) {
+  background: var(--ui-close-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-dialog .jodit-dialog__header-toolbar [class*='_close'] .jodit-toolbar-button__button:hover:not([disabled]) svg {
+  fill: var(--ui-close-hover-icon);
+  stroke: var(--ui-close-hover-icon);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-dialog .jodit-dialog__content {
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-dialog .jodit-dialog__footer {
+  border-top: 1px solid var(--ui-dialog-header-border);
+  background: var(--ui-dialog-footer-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-popup .jodit-popup__content {
+  padding: 4px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree {
+  --jd-color-background-filebrowser-folders: var(--ui-pane-bg);
+  --jd-color-folder-title: var(--ui-pane-text);
+  padding-top: 4px;
+  border-right: 1px solid var(--ui-pane-border);
+  background: var(--ui-pane-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree::-webkit-scrollbar-thumb {
+  background-color: var(--ui-scrollbar);
+  outline: 0;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__item {
+  min-height: 26px;
+  padding: 2px 8px;
+  border: 1px solid transparent;
+  margin: 1px 6px;
+  border-radius: var(--ui-item-radius);
+  color: var(--ui-pane-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__item-title {
+  display: flex;
+  align-items: center;
+  color: var(--ui-pane-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__item-title::before {
+  width: 16px;
+  height: 14px;
+  flex: none;
+  margin-right: 8px;
+  background: var(--ui-folder-icon) no-repeat center / contain;
+  content: '';
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__item:hover {
+  border-color: var(--ui-item-hover-border);
+  background: var(--ui-item-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__item:hover .jodit-file-browser-tree__item-title {
+  color: var(--ui-pane-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__item .jodit-ui-button svg {
+  fill: var(--ui-muted);
+  stroke: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__source-title {
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--ui-pane-border);
+  background: var(--ui-source-bg);
+  color: var(--ui-source-text);
+  font-weight: 600;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__plus {
+  margin: 6px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files {
+  background: var(--ui-files-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files::-webkit-scrollbar-thumb {
+  background-color: var(--ui-scrollbar);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item {
+  border-color: transparent;
+  border-radius: var(--ui-item-radius);
+  text-decoration: none;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item:hover {
+  border-color: var(--ui-item-hover-border);
+  background: var(--ui-item-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item_active_true,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item_active_true:hover {
+  border-color: var(--ui-item-selected-border);
+  background: var(--ui-item-selected-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item_active_true .jodit-file-browser-files__item-info,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item_active_true:hover .jodit-file-browser-files__item-info,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item_active_true .jodit-file-browser-files__item-info > span,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item_active_true:hover .jodit-file-browser-files__item-info > span {
+  background-color: transparent;
+  color: var(--ui-item-selected-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item {
+  height: auto;
+  min-height: var(--jd-col-size);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 6px 6px 4px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item img {
+  max-height: calc(var(--jd-col-size) - 56px);
+  box-sizing: border-box;
+  border: var(--ui-thumb-border);
+  margin: auto 0;
+  border-radius: var(--ui-thumb-radius);
+  box-shadow: var(--ui-thumb-shadow);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info {
+  position: static;
+  width: 100%;
+  padding: 4px 0 0;
+  background: transparent;
+  color: var(--ui-text);
+  opacity: 1;
+  text-align: center;
+  text-shadow: none;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info > span {
+  color: var(--ui-muted);
+  font-size: 11px;
+  line-height: 15px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info > .jodit-file-browser-files__item-info-filename {
+  color: var(--ui-text);
+  font-size: 12px;
+  font-weight: normal;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_list a {
+  border-color: transparent;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_list a:hover {
+  border-color: var(--ui-item-hover-border);
+  background: var(--ui-item-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_list a:hover .jodit-file-browser-files__item-info {
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_list a .jodit-file-browser-files__item-info > span {
+  color: var(--ui-muted);
+  font-weight: normal;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files_view_list a .jodit-file-browser-files__item-info > .jodit-file-browser-files__item-info-filename {
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-preview__navigation svg {
+  fill: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-preview__navigation:hover svg {
+  fill: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	).jodit-file-browser-pro {
+  font-family: var(--jd-font-default);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-pro__panel {
+  overflow: hidden;
+  border: 1px solid var(--ui-dialog-border);
+  border-radius: var(--ui-dialog-radius);
+  background-color: var(--ui-surface);
+  box-shadow: var(--ui-shadow);
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-pro__header {
+  min-height: 40px;
+  border-bottom-color: var(--ui-toolbar-border);
+  background: var(--ui-toolbar-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-pro__header-title,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-pro__header-toolbar {
+  line-height: 38px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-pro__header-toolbar [class*='_close'] .jodit-toolbar-button__button:hover:not([disabled]) {
+  background: var(--ui-close-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-pro__header-toolbar [class*='_close'] .jodit-toolbar-button__button:hover:not([disabled]) svg {
+  fill: var(--ui-close-hover-icon);
+  stroke: var(--ui-close-hover-icon);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-pro__resizer svg {
+  fill: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-panel {
+  --jd-fb-color: var(--ui-text);
+  --jd-files-bg: var(--ui-files-bg);
+  --jd-item-bg: transparent;
+  --jd-item-bg-hover: var(--ui-item-hover-bg);
+  --jd-item-border-color: transparent;
+  --jd-item-border-selected-color: var(--ui-item-selected-border);
+  --jd-item-border-bg-selected-color: var(--ui-item-selected-bg);
+  --jd-item-info-color: var(--ui-text);
+  --jd-item-info-bg: transparent;
+  --jd-sidebar-bg: var(--ui-pane-bg);
+  --jd-sidebar-color: var(--ui-pane-text);
+  --jd-sidebar-border-color: var(--ui-pane-border);
+  --jd-sidebar-hide-btn-bg: var(--ui-pane-bg);
+  --jd-folder-bg: var(--ui-item-hover-bg);
+  --jd-folder-border: var(--ui-item-hover-border);
+  --jd-source-bg: var(--ui-source-bg);
+  --jd-source-border: var(--ui-pane-border);
+  --jd-message-bg: var(--ui-surface);
+  --jd-message-color: var(--ui-text);
+  --jd-message-shadow-color: var(--ui-line);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-sidebar__box::-webkit-scrollbar-track,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-virtual-scroll::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-sidebar__box::-webkit-scrollbar-thumb,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-virtual-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--ui-scrollbar);
+  outline: 0;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-sidebar {
+  background: var(--ui-pane-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-sidebar__hide-btn svg {
+  fill: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-source__name {
+  height: auto;
+  padding: 8px 12px;
+  background: var(--ui-source-bg);
+  color: var(--ui-source-text);
+  font-weight: 600;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-folder {
+  padding: 3px 8px;
+  border: 1px solid transparent;
+  margin: 1px 6px;
+  border-radius: var(--ui-item-radius);
+  color: var(--ui-pane-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-folder:hover {
+  border-color: var(--ui-item-hover-border);
+  background: var(--ui-item-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-folder_active_true,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-folder_active_true:hover {
+  border-color: var(--ui-item-selected-border);
+  background: var(--ui-item-selected-bg);
+  color: var(--ui-item-selected-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-folder__icon-wrapper {
+  background: var(--ui-folder-icon) no-repeat center / contain;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-folder__icon-wrapper svg {
+  display: none;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-folder__arrow svg {
+  fill: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item {
+  border: 1px solid transparent;
+  border-radius: var(--ui-item-radius);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item:hover {
+  border-color: var(--ui-item-hover-border);
+  background: var(--ui-item-hover-bg);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true:hover {
+  border-color: var(--ui-item-selected-border);
+  background: var(--ui-item-selected-bg);
+  outline: 0;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true .jodit-ui-browser-item__name,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true:hover .jodit-ui-browser-item__name,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true .jodit-ui-browser-item__time,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true:hover .jodit-ui-browser-item__time,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true .jodit-ui-browser-item__filesize,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true:hover .jodit-ui-browser-item__filesize {
+  color: var(--ui-item-selected-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item__name {
+  color: var(--ui-text);
+  font-weight: normal;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item__heart svg {
+  fill: var(--ui-muted);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  padding: 6px 6px 4px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__image {
+  width: 100%;
+  height: calc(var(--jd-item-size) - 40px);
+  border-radius: var(--ui-thumb-radius);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__info,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		).jodit-ui-browser-item.jodit-ui-browser-item_view_tiles:hover .jodit-ui-browser-item__info {
+  position: static;
+  padding: 4px 0 0;
+  background: transparent;
+  opacity: 1;
+  text-align: center;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__name {
+  font-size: 12px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__time,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__filesize {
+  color: var(--ui-muted);
+  font-size: 11px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-status-bar {
+  border-top-color: var(--ui-toolbar-border);
+  background: var(--ui-status-bg);
+  color: var(--ui-status-text);
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-status-bar [class*='__slot-'] {
+  opacity: 1;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-tree__source-title,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-source__name {
+  font-size: 11px;
+}
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-file-browser-files__item_active_true .jodit-file-browser-files__item-info > .jodit-file-browser-files__item-info-filename,
+:is(
+		.jodit_theme_macos,
+		.jodit-dialog_theme_macos,
+		.jodit-file-browser-pro_theme_macos
+	) .jodit-ui-browser-item_active_true .jodit-ui-browser-item__name {
+  display: inline-block;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: #0063e1;
+  color: #fff;
+}

@@ -1,0 +1,82 @@
+/*!
+ * jodit-ui-themes: Moono theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Moono (CKEditor 4): light grey gradient toolbar and status bar, bevelled buttons with a dark pressed state, grey dialog title bar with the green OK button, light blue menu highlight.
+//
+// Palette (`.theme-tokens()`) and the rules beyond the shared base
+// (`.theme-editor()`, `.theme-finder()`) for the moono.*.less files.
+// The tokens are described in ../_base/tokens.less.
+
+.theme-tokens() {
+	--ui-font: arial, helvetica, tahoma, verdana, sans-serif;
+	--ui-font-size: 12px;
+	--ui-text: #333;
+	--ui-muted: #777;
+	--ui-icon: #474747;
+	--ui-accent: #139ff7;
+	--ui-selection: #c5e3fb;
+	--ui-surface: #fff;
+	--ui-surface-alt: #f8f8f8;
+	--ui-line: #d1d1d1;
+	--ui-frame: #b6b6b6;
+	--ui-radius: 0;
+	--ui-shadow: 0 1px 5px rgb(0 0 0 / 40%);
+	--ui-toolbar-bg: linear-gradient(#f9f9f9, #e3e3e3);
+	--ui-toolbar-border: #b6b6b6;
+	--ui-btn-radius: 2px;
+	--ui-hover-bg: linear-gradient(#f2f2f2, #ccc);
+	--ui-hover-border: #a6a6a6;
+	--ui-pressed-bg: linear-gradient(#aaa, #cacaca);
+	--ui-pressed-hover-bg: linear-gradient(#9c9c9c, #c0c0c0);
+	--ui-pressed-border: #8a8a8a;
+	--ui-status-bg: linear-gradient(#ebebeb, #cfd1cf);
+	--ui-status-text: #484848;
+	--ui-menu-border: #b6b6b6;
+	--ui-menu-radius: 0;
+	--ui-menu-shadow: 0 1px 5px rgb(0 0 0 / 40%);
+	--ui-menu-hover-bg: #dff1ff;
+	--ui-field-border: #b6b6b6;
+	--ui-field-hover-border: #a0a0a0;
+	--ui-field-radius: 3px;
+	--ui-field-focus-ring: inset 0 1px 2px rgb(0 0 0 / 15%);
+	--ui-push-bg: linear-gradient(#fff, #e4e4e4);
+	--ui-push-text: #474747;
+	--ui-push-border: #b6b6b6;
+	--ui-push-hover-bg: linear-gradient(#f6f6f6, #dadada);
+	--ui-push-active-bg: linear-gradient(#e0e0e0, #f4f4f4);
+	--ui-push-radius: 3px;
+	--ui-push-shadow: 0 1px 0 rgb(255 255 255 / 50%);
+	--ui-primary-bg: linear-gradient(#9ad717, #69b10b);
+	--ui-primary-border: #5b9909;
+	--ui-primary-hover-bg: linear-gradient(#8ac30f, #5f9f08);
+	--ui-dialog-border: #b2b2b2;
+	--ui-dialog-radius: 3px;
+	--ui-dialog-header-bg: linear-gradient(#f8f8f8, #ebebeb);
+	--ui-dialog-header-border: #999;
+	--ui-dialog-title: #474747;
+	--ui-dialog-title-size: 13px;
+	--ui-dialog-title-weight: bold;
+	--ui-dialog-footer-bg: linear-gradient(#ebebeb, #cfd1cf);
+	--ui-close-hover-bg: #d6d6d6;
+	--ui-close-hover-icon: #333;
+	--ui-pane-bg: #f8f8f8;
+	--ui-item-radius: 2px;
+	--ui-item-hover-bg: #ececec;
+	--ui-item-selected-bg: #dff1ff;
+	--ui-item-selected-border: #9cc8ee;
+	--ui-thumb-radius: 0;
+	--ui-thumb-border: 1px solid #ddd;
+}
+
+.theme-editor() {
+	// The primary button keeps its border colour on hover
+	.jodit-ui-button_variant_primary:hover:not([disabled]) {
+		border-color: #5b9909;
+	}
+}
+
+.theme-finder() {
+}

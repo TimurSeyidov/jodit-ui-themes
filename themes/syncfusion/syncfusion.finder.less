@@ -1,0 +1,27 @@
+/*!
+ * jodit-ui-themes: Syncfusion theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Syncfusion theme, file browser part: the free Jodit file browser and the
+// Jodit PRO finder. Buttons, inputs and menus inside the file browsers come
+// from the editor part (syncfusion.editor.css).
+
+// Usage: load the stylesheet after the Jodit styles and set
+// `theme: 'syncfusion'`. Palette and theme-specific rules: _theme.less.
+
+@import (reference) '../_base/tokens.less';
+@import (reference) '../_base/finder.less';
+@import (reference) '_theme.less';
+
+:is(
+		.jodit_theme_syncfusion,
+		.jodit-dialog_theme_syncfusion,
+		.jodit-file-browser-pro_theme_syncfusion
+	) {
+	.jui-defaults();
+	.theme-tokens();
+	.jui-finder();
+	.theme-finder();
+}

@@ -1,0 +1,75 @@
+/*!
+ * jodit-ui-themes: Windows 11 theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Windows 11 (Fluent 2): light Mica surfaces, 4px and 8px corners, subtle grey hover, accent #005fb8, fields with an accent underline, File Explorer navigation with an accent pill.
+//
+// Palette (`.theme-tokens()`) and the rules beyond the shared base
+// (`.theme-editor()`, `.theme-finder()`) for the windows11.*.less files.
+// The tokens are described in ../_base/tokens.less.
+
+.theme-tokens() {
+	--ui-font: 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, sans-serif;
+	--ui-text: #1a1a1a;
+	--ui-muted: #5f5f5f;
+	--ui-accent: #005fb8;
+	--ui-selection: #cfe4fa;
+	--ui-surface: #fff;
+	--ui-surface-alt: #f3f3f3;
+	--ui-line: #e5e5e5;
+	--ui-frame: #d9d9d9;
+	--ui-radius: 8px;
+	--ui-shadow: 0 8px 32px rgb(0 0 0 / 18%), 0 2px 8px rgb(0 0 0 / 8%);
+	--ui-toolbar-bg: #f9f9f9;
+	--ui-hover-bg: #f0f0f0;
+	--ui-pressed-bg: #e0eaf5;
+	--ui-pressed-hover-bg: #d4e2f2;
+	--ui-pressed-icon: #005fb8;
+	--ui-menu-bg: #f9f9f9;
+	--ui-menu-radius: 8px;
+	--ui-menu-shadow: 0 8px 16px rgb(0 0 0 / 14%);
+	--ui-menu-hover-bg: #ededed;
+	--ui-field-border: #e5e5e5;
+	--ui-field-hover-border: #d4d4d4;
+	--ui-field-focus-border: #e5e5e5;
+	--ui-field-focus-ring: inset 0 -2px 0 #005fb8;
+	--ui-push-bg: #fbfbfb;
+	--ui-push-border: #e5e5e5;
+	--ui-push-shadow: inset 0 -1px 0 rgb(0 0 0 / 12%);
+	--ui-push-hover-bg: #f6f6f6;
+	--ui-push-active-bg: #f2f2f2;
+	--ui-primary-hover-bg: #196ebf;
+	--ui-dialog-footer-bg: #f3f3f3;
+	--ui-pane-bg: #f9f9f9;
+	--ui-item-hover-bg: #f0f0f0;
+	--ui-item-selected-bg: #dde9f6;
+	--ui-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 2.5C1 1.7 1.7 1 2.5 1h3.6l1.6 1.6h5.8c.8 0 1.5.7 1.5 1.5v7.4c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%23e8a33d'/%3E%3Cpath d='M1 5h14v6.5c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%23ffd35c'/%3E%3C/svg%3E");
+}
+
+.theme-editor() {
+	// Fields: hairline frame with a darker bottom edge
+	.jodit-input,
+	.jodit-select,
+	.jodit-ui-input__wrapper,
+	.jodit-ui-select__wrapper,
+	.jodit-ui-text-area__wrapper,
+	.jodit-form input[type='text'],
+	.jodit-form input[type='url'],
+	.jodit-form textarea {
+		border-bottom-color: #868686;
+	}
+
+	// Menu items: rounded highlight inside the menu
+	&.jodit-popup .jodit-popup__content {
+		padding: 4px;
+	}
+}
+
+.theme-finder() {
+	// Navigation pane: accent pill on the current folder
+	.jodit-ui-browser-folder_active_true {
+		box-shadow: inset 3px 0 0 var(--ui-accent);
+	}
+}

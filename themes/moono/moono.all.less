@@ -1,0 +1,28 @@
+/*!
+ * jodit-ui-themes: Moono theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Moono theme, everything: the editor and both file browsers.
+
+// Usage: load the stylesheet after the Jodit styles and set
+// `theme: 'moono'`. Palette and theme-specific rules: _theme.less.
+
+@import (reference) '../_base/tokens.less';
+@import (reference) '../_base/editor.less';
+@import (reference) '../_base/finder.less';
+@import (reference) '_theme.less';
+
+:is(
+		.jodit_theme_moono,
+		.jodit-dialog_theme_moono,
+		.jodit-file-browser-pro_theme_moono
+	) {
+	.jui-defaults();
+	.theme-tokens();
+	.jui-editor();
+	.theme-editor();
+	.jui-finder();
+	.theme-finder();
+}

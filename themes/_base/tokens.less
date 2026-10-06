@@ -1,0 +1,103 @@
+// Default values of the `--ui-*` tokens used by `.jui-editor()` and
+// `.jui-finder()`. A theme calls `.jui-defaults()` first and then sets its
+// own tokens in the same block: later declarations win, and the defaults
+// that refer to other tokens follow the theme values.
+
+.jui-defaults() {
+	// Typography and text
+	--ui-font: system-ui, -apple-system, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif;
+	--ui-font-size: 13px;
+	--ui-text: #1f1f1f;
+	--ui-muted: #6b6b6b;
+	--ui-icon: var(--ui-text);
+	--ui-accent: #0067c0;
+	--ui-link: var(--ui-accent);
+	--ui-selection: #b4d7ff;
+
+	// Surfaces and frame
+	--ui-surface: #fff;
+	--ui-surface-alt: #f3f3f3;
+	--ui-content-bg: #fff;
+	--ui-content-text: var(--ui-text);
+	--ui-line: #e0e0e0;
+	--ui-frame: #d1d1d1;
+	--ui-radius: 0;
+	--ui-shadow: 0 8px 24px rgb(0 0 0 / 20%);
+
+	// Toolbar buttons
+	--ui-toolbar-bg: var(--ui-surface);
+	--ui-toolbar-border: var(--ui-line);
+	--ui-btn-radius: 4px;
+	--ui-hover-bg: #ebebeb;
+	--ui-hover-border: transparent;
+	--ui-pressed-bg: #dcdcdc;
+	--ui-pressed-border: transparent;
+	--ui-pressed-hover-bg: var(--ui-pressed-bg);
+	--ui-pressed-icon: var(--ui-icon);
+
+	// Status bar
+	--ui-status-bg: var(--ui-toolbar-bg);
+	--ui-status-text: var(--ui-muted);
+
+	// Menus and popups
+	--ui-menu-bg: var(--ui-surface);
+	--ui-menu-border: var(--ui-line);
+	--ui-menu-radius: 4px;
+	--ui-menu-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+	--ui-menu-hover-bg: var(--ui-hover-bg);
+	--ui-menu-hover-text: var(--ui-text);
+
+	// Form fields
+	--ui-field-bg: var(--ui-surface);
+	--ui-field-text: var(--ui-text);
+	--ui-field-border: #c8c8c8;
+	--ui-field-hover-border: #a0a0a0;
+	--ui-field-focus-border: var(--ui-accent);
+	--ui-field-focus-ring: none;
+	--ui-field-radius: 4px;
+
+	// Push buttons in dialogs
+	--ui-push-bg: var(--ui-surface);
+	--ui-push-text: var(--ui-text);
+	--ui-push-border: var(--ui-field-border);
+	--ui-push-hover-bg: var(--ui-hover-bg);
+	--ui-push-hover-border: var(--ui-push-border);
+	--ui-push-active-bg: var(--ui-pressed-bg);
+	--ui-push-radius: var(--ui-btn-radius);
+	--ui-push-shadow: none;
+	--ui-primary-bg: var(--ui-accent);
+	--ui-primary-text: #fff;
+	--ui-primary-border: var(--ui-primary-bg);
+	--ui-primary-hover-bg: var(--ui-primary-bg);
+
+	// Dialogs
+	--ui-dialog-border: var(--ui-frame);
+	--ui-dialog-radius: var(--ui-radius);
+	--ui-dialog-header-bg: var(--ui-surface);
+	--ui-dialog-header-border: var(--ui-line);
+	--ui-dialog-title: var(--ui-text);
+	--ui-dialog-title-size: 14px;
+	--ui-dialog-title-weight: 600;
+	--ui-dialog-footer-bg: var(--ui-surface-alt);
+	--ui-close-hover-bg: #c42b1c;
+	--ui-close-hover-icon: #fff;
+
+	// File browsers
+	--ui-pane-bg: var(--ui-surface-alt);
+	--ui-pane-text: var(--ui-text);
+	--ui-pane-border: var(--ui-line);
+	--ui-source-bg: var(--ui-pane-bg);
+	--ui-source-text: var(--ui-muted);
+	--ui-files-bg: var(--ui-content-bg);
+	--ui-item-radius: 4px;
+	--ui-item-hover-bg: var(--ui-hover-bg);
+	--ui-item-hover-border: transparent;
+	--ui-item-selected-bg: var(--ui-pressed-bg);
+	--ui-item-selected-border: transparent;
+	--ui-item-selected-text: var(--ui-text);
+	--ui-thumb-radius: 4px;
+	--ui-thumb-border: 0;
+	--ui-thumb-shadow: none;
+	--ui-scrollbar: #c2c2c2;
+	--ui-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 1.5h5l1.5 1.5H15v10H1z' fill='%23e0a838'/%3E%3Cpath d='M1 4.5h14V13H1z' fill='%23ffd35c'/%3E%3C/svg%3E");
+}

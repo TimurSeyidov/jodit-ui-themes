@@ -1,0 +1,1386 @@
+/*!
+ * jodit-ui-themes: Office 2010 theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+/*!
+ * jodit-ui-themes: Office 2010 theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) {
+  --office-frame: #8ba0bc;
+  --office-line: #a7bad7;
+  --office-line-light: rgba(255, 255, 255, 0.7);
+  --office-ribbon: linear-gradient(#e7eff9, #d6e3f3 45%, #c9daf0);
+  --office-bar: linear-gradient(#e4ecf7, #c7d8ee);
+  --office-title: #15428b;
+  --office-text: #1e395b;
+  --office-hover: linear-gradient(#fffcea, #fff1bd 45%, #ffe38d 50%, #fff4c7);
+  --office-hover-border: #dbce99;
+  --office-pressed: linear-gradient(#fcd9a2, #fbc77a 45%, #f9ad49 50%, #fcd38c);
+  --office-pressed-hover: linear-gradient(#fbcf8f, #fab866 45%, #f79a2e 50%, #fbc274);
+  --office-pressed-border: #c2913d;
+  --office-input-border: #abc1de;
+  --office-input-focus: #e3c26b;
+  --jd-color-border: var(--office-line);
+  --jd-color-panel: #dbe6f4;
+  --jd-color-text: #000;
+  --jd-color-text-icons: var(--office-text);
+  --jd-color-icon: var(--office-text);
+  --jd-color-label: var(--office-title);
+  --jd-color-background-selection: #c3d9f5;
+  --jd-color-button-background-hover: #ffe8a6;
+  --jd-border-radius-default: 3px;
+  --jd-font-default: 'Segoe UI', tahoma, arial, sans-serif;
+  --jd-font-size-default: 13px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar__box:not(:empty) {
+  border-bottom-color: var(--office-frame);
+  background: var(--office-ribbon);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar__box:not(:empty) .jodit-toolbar-editor-collection::after {
+  display: none;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-collection_mode_horizontal,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-editor-collection_mode_horizontal {
+  background-image: none;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-separator,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-group_separated_true:not(
+			:last-child,
+			.jodit-ui-group_before-spacer_true
+		)::after {
+  border-right-color: var(--office-line);
+  box-shadow: 1px 0 0 var(--office-line-light);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-break {
+  border-top-color: var(--office-line);
+  box-shadow: 0 1px 0 var(--office-line-light);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button {
+  color: var(--office-text);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button svg,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select svg,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button svg,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button .jodit-icon,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select .jodit-icon,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button .jodit-icon {
+  fill: var(--office-text);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__text,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__text,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button__text {
+  color: var(--office-text);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select:hover:not([disabled]) {
+  border-color: var(--office-hover-border);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button:has( > [aria-pressed='true']:not([disabled])) {
+  border-color: var(--office-pressed-border);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__button:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__trigger:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__button:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__trigger:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button:not([class*='_variant_']):hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_initial:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__button:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__trigger:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__button:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__trigger:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button:not([class*='_variant_']):focus-visible:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_initial:focus-visible:not([disabled]) {
+  background: var(--office-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__button:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__trigger:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__button:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__trigger:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button:not([class*='_variant_']):active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_initial:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__button[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__trigger[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__button[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__trigger[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button:not([class*='_variant_'])[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_initial[aria-pressed='true']:not([disabled]) {
+  background: var(--office-pressed);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__button[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button__trigger[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__button[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-select__trigger[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button:not([class*='_variant_'])[aria-pressed='true']:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_initial[aria-pressed='true']:hover:not([disabled]) {
+  background: var(--office-pressed-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-button_with-trigger_true:hover:not([disabled]) .jodit-toolbar-button__trigger {
+  border-left: 1px solid var(--office-hover-border);
+  opacity: 1;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-tabs .jodit-tabs__buttons .jodit-ui-button:active:not([disabled]) .jodit-ui-button__text,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-tabs .jodit-tabs__buttons .jodit-ui-button[aria-pressed='true']:not([disabled]) .jodit-ui-button__text {
+  background: transparent;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-dialog__footer .jodit-ui-button,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_default,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_secondary,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_primary {
+  border: 1px solid #707070;
+  border-radius: 3px;
+  background: linear-gradient(#f2f2f2, #ebebeb 45%, #dddddd 50%, #cfcfcf);
+  color: #000;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-dialog__footer .jodit-ui-button svg,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_default svg,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_secondary svg,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_primary svg {
+  fill: #000;
+  stroke: #000;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-dialog__footer .jodit-ui-button:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_default:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_secondary:focus-visible:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_primary:focus-visible:not([disabled]) {
+  background: linear-gradient(#f2f2f2, #ebebeb 45%, #dddddd 50%, #cfcfcf);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-dialog__footer .jodit-ui-button:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_default:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_secondary:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_primary:hover:not([disabled]) {
+  border-color: #3c7fb1;
+  background: linear-gradient(#eaf6fd, #d9f0fc 45%, #bee6fd 50%, #a7d9f5);
+  color: #000;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-dialog__footer .jodit-ui-button:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_default:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_secondary:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_primary:active:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-dialog__footer .jodit-ui-button[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_default[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_secondary[aria-pressed='true']:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_primary[aria-pressed='true']:not([disabled]) {
+  border-color: #2c628b;
+  background: linear-gradient(#e5f4fc, #c4e5f6 45%, #98d1ef 50%, #68b3db);
+  color: #000;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-button_variant_primary,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-dialog__footer .jodit-ui-button:focus:not([disabled]) {
+  box-shadow: inset 0 0 0 1px #48d8fb;
+  outline: 0;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-container {
+  border-color: var(--office-frame);
+  background-color: #fff;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-container:not(.jodit_inline) .jodit-workplace {
+  border-color: #fff;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-wysiwyg,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-wysiwyg_iframe {
+  background-color: #fff;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar {
+  height: 22px;
+  background: var(--office-bar);
+  color: var(--office-title);
+  text-transform: none;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar:not(:empty) {
+  border-top-color: var(--office-frame);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item > span,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item a,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar a.jodit-status-bar-link,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item > span:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item a:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar a.jodit-status-bar-link:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar:visited,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item:visited,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item > span:visited,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item a:visited,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar a.jodit-status-bar-link:visited {
+  color: var(--office-title);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-status-bar .jodit-status-bar__item a:hover {
+  background: var(--office-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-popup,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-popup,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-context-menu {
+  border: 1px solid #868686;
+  border-radius: 0;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-popup__content,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-popup .jodit-popup__content,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-context-menu,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-context-menu [class*='__content'] {
+  background: #fafafa;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-collection_mode_vertical .jodit-toolbar-button__button:hover:not([disabled]),
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-toolbar-editor-collection_mode_vertical .jodit-toolbar-button__button:hover:not([disabled]) {
+  background: var(--office-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-input,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-select,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-input__wrapper,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form input[type='text'],
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form input[type='url'],
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form textarea {
+  border-color: var(--office-input-border);
+  border-radius: 0;
+  background-color: #fff;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-input:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-select:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-input__wrapper:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form input[type='text']:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form input[type='url']:hover,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form textarea:hover {
+  border-color: var(--office-input-focus);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-input:focus,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-select:focus,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-input__wrapper:focus,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form input[type='text']:focus,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form input[type='url']:focus,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-form textarea:focus {
+  border-color: var(--office-input-focus);
+  box-shadow: none;
+  outline: 0;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-dialog .jodit-dialog__panel {
+  border: 1px solid var(--office-frame);
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-dialog .jodit-dialog__header {
+  min-height: 34px;
+  border-bottom-color: var(--office-frame);
+  border-radius: 3px 3px 0 0;
+  background: var(--office-bar);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-dialog .jodit-dialog__header-title {
+  color: var(--office-title);
+  font-size: 14px;
+  font-weight: normal;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-dialog .jodit-dialog__footer {
+  border-top: 1px solid var(--office-line);
+  background: #f0f4fa;
+}
+/*!
+ * jodit-ui-themes: Office 2010 theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) {
+  --office-frame: #8ba0bc;
+  --office-line: #a7bad7;
+  --office-ribbon: linear-gradient(#e7eff9, #d6e3f3 45%, #c9daf0);
+  --office-bar: linear-gradient(#e4ecf7, #c7d8ee);
+  --office-title: #15428b;
+  --office-text: #1e395b;
+  --office-item-hover: linear-gradient(#fafbfd, #ebf3fd);
+  --office-item-hover-border: #b8d6fb;
+  --office-item-selected: linear-gradient(#dcebfc, #c1dbfc);
+  --office-item-selected-border: #7da2ce;
+  --office-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 2.5C1 1.7 1.7 1 2.5 1h3.6l1.6 1.6h5.8c.8 0 1.5.7 1.5 1.5v7.4c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%23e8b84a'/%3E%3Cpath d='M1 5h14v6.5c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%23fbd96e'/%3E%3C/svg%3E");
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree {
+  --jd-color-background-filebrowser-folders: #f1f5fb;
+  --jd-color-folder-title: var(--office-text);
+  border-right: 1px solid var(--office-line);
+  background: linear-gradient(90deg, #f6f9fd, #e9f0f9);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree::-webkit-scrollbar-thumb {
+  background-color: #c2d3ea;
+  outline: 0;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree__item {
+  min-height: 26px;
+  padding: 2px 6px;
+  border: 1px solid transparent;
+  margin: 1px 4px;
+  border-radius: 3px;
+  color: var(--office-text);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree__item-title {
+  display: flex;
+  align-items: center;
+  color: var(--office-text);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree__item-title::before {
+  width: 16px;
+  height: 14px;
+  flex: none;
+  margin-right: 6px;
+  background: var(--office-folder-icon) no-repeat center / contain;
+  content: '';
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree__item:hover {
+  border-color: var(--office-item-hover-border);
+  background: var(--office-item-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree__item:hover .jodit-file-browser-tree__item-title {
+  color: #000;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree__item .jodit-ui-button svg {
+  fill: var(--office-text);
+  stroke: var(--office-text);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree__source-title {
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--office-line);
+  background: var(--office-bar);
+  color: var(--office-title);
+  font-weight: 600;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-tree__plus {
+  margin: 6px 4px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files {
+  background: #fff;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files__item {
+  border-color: transparent;
+  border-radius: 3px;
+  text-decoration: none;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files__item:hover {
+  border-color: var(--office-item-hover-border);
+  background: var(--office-item-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files__item_active_true,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files__item_active_true:hover {
+  border-color: var(--office-item-selected-border);
+  background: var(--office-item-selected);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files__item_active_true .jodit-file-browser-files__item-info,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files__item_active_true:hover .jodit-file-browser-files__item-info {
+  background-color: transparent;
+  color: #000;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item {
+  height: auto;
+  min-height: var(--jd-col-size);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 6px 6px 4px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item img {
+  max-height: calc(var(--jd-col-size) - 56px);
+  box-sizing: border-box;
+  border: 3px solid #fff;
+  margin: auto 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info {
+  position: static;
+  width: 100%;
+  padding: 4px 0 0;
+  background: transparent;
+  color: #000;
+  opacity: 1;
+  text-align: center;
+  text-shadow: none;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info > span {
+  color: #6d6d6d;
+  font-size: 11px;
+  line-height: 15px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_tiles .jodit-file-browser-files__item .jodit-file-browser-files__item-info > .jodit-file-browser-files__item-info-filename {
+  color: #000;
+  font-size: 12px;
+  font-weight: normal;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_list a {
+  border-color: #eef2f8;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_list a:hover {
+  border-color: var(--office-item-hover-border);
+  background: var(--office-item-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_list a:hover .jodit-file-browser-files__item-info {
+  color: #000;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-files_view_list a .jodit-file-browser-files__item-info > span {
+  color: #000;
+  font-weight: normal;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-preview__navigation svg {
+  fill: var(--office-frame);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-preview__navigation:hover svg {
+  fill: var(--office-title);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	).jodit-file-browser-pro {
+  font-family: var(--jd-font-default);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-pro__panel {
+  border: 1px solid var(--office-frame);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-pro__header {
+  min-height: 40px;
+  border-bottom-color: var(--office-frame);
+  border-radius: 3px 3px 0 0;
+  background: var(--office-ribbon);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-pro__header-title,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-pro__header-toolbar {
+  line-height: 38px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-file-browser-pro__resizer svg {
+  fill: var(--office-frame);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-panel {
+  --jd-fb-color: var(--office-text);
+  --jd-files-bg: #fff;
+  --jd-item-bg: transparent;
+  --jd-item-bg-hover: #ebf3fd;
+  --jd-item-border-color: #eef2f8;
+  --jd-item-border-selected-color: var(--office-item-selected-border);
+  --jd-item-border-bg-selected-color: #cde2fc;
+  --jd-item-info-color: #000;
+  --jd-item-info-bg: transparent;
+  --jd-sidebar-bg: #f1f5fb;
+  --jd-sidebar-color: var(--office-text);
+  --jd-sidebar-border-color: var(--office-line);
+  --jd-sidebar-hide-btn-bg: #e4ecf7;
+  --jd-folder-bg: #ebf3fd;
+  --jd-folder-border: var(--office-item-hover-border);
+  --jd-source-bg: #dbe6f4;
+  --jd-source-border: var(--office-line);
+  --jd-message-bg: #fffbe6f0;
+  --jd-message-color: #000;
+  --jd-message-shadow-color: #8ba0bc;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-sidebar__box::-webkit-scrollbar-track,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-virtual-scroll::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-sidebar__box::-webkit-scrollbar-thumb,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-virtual-scroll::-webkit-scrollbar-thumb {
+  background-color: #c2d3ea;
+  outline: 0;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-sidebar {
+  background: linear-gradient(90deg, #f6f9fd, #e9f0f9);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-source__name {
+  height: auto;
+  padding: 5px 8px;
+  background: var(--office-bar);
+  color: var(--office-title);
+  font-weight: 600;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-folder {
+  padding: 3px 6px;
+  border: 1px solid transparent;
+  margin: 1px 4px;
+  border-radius: 3px;
+  color: var(--office-text);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-folder:hover {
+  border-color: var(--office-item-hover-border);
+  background: var(--office-item-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-folder_active_true,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-folder_active_true:hover {
+  border-color: var(--office-item-selected-border);
+  background: var(--office-item-selected);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-folder__icon-wrapper {
+  background: var(--office-folder-icon) no-repeat center / contain;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-folder__icon-wrapper svg {
+  display: none;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-folder__arrow svg {
+  fill: var(--office-frame);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item {
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item:hover {
+  border-color: var(--office-item-hover-border);
+  background: var(--office-item-hover);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_active_true,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_active_true:hover {
+  border-color: var(--office-item-selected-border);
+  background: var(--office-item-selected);
+  outline: 0;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item__name {
+  font-weight: normal;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  padding: 6px 6px 4px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__image {
+  width: 100%;
+  height: calc(var(--jd-item-size) - 40px);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__info,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		).jodit-ui-browser-item.jodit-ui-browser-item_view_tiles:hover .jodit-ui-browser-item__info {
+  position: static;
+  padding: 4px 0 0;
+  background: transparent;
+  opacity: 1;
+  text-align: center;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__name {
+  font-size: 12px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__time,
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-item_view_tiles:not(
+			.jodit-ui-browser-item_size_small,
+			.jodit-ui-browser-item_size_xsmall
+		) .jodit-ui-browser-item__filesize {
+  color: #6d6d6d;
+  font-size: 11px;
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-status-bar {
+  border-top-color: var(--office-frame);
+  background: var(--office-bar);
+  color: var(--office-title);
+}
+:is(
+		.jodit_theme_office2010,
+		.jodit-dialog_theme_office2010,
+		.jodit-file-browser-pro_theme_office2010
+	) .jodit-ui-browser-status-bar [class*='__slot-'] {
+  opacity: 1;
+}

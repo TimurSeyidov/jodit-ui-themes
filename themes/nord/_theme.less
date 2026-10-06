@@ -1,0 +1,71 @@
+/*!
+ * jodit-ui-themes: Nord theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Nord: the arctic Polar Night background with Snow Storm text, Frost blue accents and folders, Aurora red close button.
+//
+// Palette (`.theme-tokens()`) and the rules beyond the shared base
+// (`.theme-editor()`, `.theme-finder()`) for the nord.*.less files.
+// The tokens are described in ../_base/tokens.less.
+
+.theme-tokens() {
+	// Native scrollbars and form controls in dark colours
+	color-scheme: dark;
+
+	--ui-text: #eceff4;
+	--ui-muted: #9aa5b8;
+	--ui-icon: #d8dee9;
+	--ui-accent: #88c0d0;
+	--ui-link: #88c0d0;
+	--ui-selection: #434c5e;
+	--ui-surface: #3b4252;
+	--ui-surface-alt: #2e3440;
+	--ui-content-bg: #2e3440;
+	--ui-content-text: #d8dee9;
+	--ui-line: #434c5e;
+	--ui-frame: #272c36;
+	--ui-radius: 6px;
+	--ui-shadow: 0 10px 30px rgb(0 0 0 / 45%);
+	--ui-toolbar-bg: #3b4252;
+	--ui-toolbar-border: #2e3440;
+	--ui-hover-bg: #434c5e;
+	--ui-pressed-bg: #4c566a;
+	--ui-pressed-hover-bg: #56607a;
+	--ui-pressed-icon: #88c0d0;
+	--ui-status-text: #9aa5b8;
+	--ui-menu-bg: #3b4252;
+	--ui-menu-border: #2e3440;
+	--ui-menu-radius: 6px;
+	--ui-menu-shadow: 0 8px 24px rgb(0 0 0 / 40%);
+	--ui-menu-hover-bg: #434c5e;
+	--ui-field-bg: #2e3440;
+	--ui-field-border: #4c566a;
+	--ui-field-hover-border: #616e88;
+	--ui-push-bg: #434c5e;
+	--ui-push-border: #4c566a;
+	--ui-push-hover-bg: #4c566a;
+	--ui-push-active-bg: #56607a;
+	--ui-primary-bg: #5e81ac;
+	--ui-primary-text: #eceff4;
+	--ui-primary-hover-bg: #6a8fbd;
+	--ui-dialog-header-bg: #3b4252;
+	--ui-dialog-header-border: #2e3440;
+	--ui-dialog-footer-bg: #3b4252;
+	--ui-close-hover-bg: #bf616a;
+	--ui-close-hover-icon: #eceff4;
+	--ui-pane-bg: #3b4252;
+	--ui-pane-border: #2e3440;
+	--ui-item-hover-bg: #434c5e;
+	--ui-item-selected-bg: #4c566a;
+	--ui-item-selected-border: #88c0d0;
+	--ui-scrollbar: #4c566a;
+	--ui-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 2.5C1 1.7 1.7 1 2.5 1h3.6l1.6 1.6h5.8c.8 0 1.5.7 1.5 1.5v7.4c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%235e81ac'/%3E%3Cpath d='M1 5h14v6.5c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%2381a1c1'/%3E%3C/svg%3E");
+}
+
+.theme-editor() {
+}
+
+.theme-finder() {
+}

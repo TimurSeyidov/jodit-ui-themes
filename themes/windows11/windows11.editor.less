@@ -1,0 +1,25 @@
+/*!
+ * jodit-ui-themes: Windows 11 theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Windows 11 theme, editor part: toolbar, buttons, menus, form fields, dialogs.
+
+// Usage: load the stylesheet after the Jodit styles and set
+// `theme: 'windows11'`. Palette and theme-specific rules: _theme.less.
+
+@import (reference) '../_base/tokens.less';
+@import (reference) '../_base/editor.less';
+@import (reference) '_theme.less';
+
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) {
+	.jui-defaults();
+	.theme-tokens();
+	.jui-editor();
+	.theme-editor();
+}

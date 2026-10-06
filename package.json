@@ -1,0 +1,53 @@
+{
+	"name": "jodit-ui-themes",
+	"version": "0.1.0",
+	"description": "CSS themes for the Jodit editor, its file browser and the Jodit PRO finder: Office 2010, Windows 10/11, macOS, Material 3, Dracula, Nord, Catppuccin and more",
+	"keywords": [
+		"jodit",
+		"jodit-pro",
+		"theme",
+		"themes",
+		"skin",
+		"css",
+		"wysiwyg",
+		"editor",
+		"file-browser",
+		"file-manager",
+		"finder"
+	],
+	"homepage": "https://github.com/TimurSeyidov/jodit-ui-themes#readme",
+	"bugs": {
+		"url": "https://github.com/TimurSeyidov/jodit-ui-themes/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/TimurSeyidov/jodit-ui-themes.git"
+	},
+	"author": "Timur Seiidov",
+	"license": "MIT",
+	"type": "module",
+	"files": [
+		"themes/",
+		"!themes/*/screenshots/",
+		"!themes/_base/*.css",
+		"!themes/*/_*.css"
+	],
+	"sideEffects": [
+		"*.css"
+	],
+	"scripts": {
+		"build": "node scripts/build.js",
+		"watch": "node scripts/build.js --watch",
+		"screenshots": "node scripts/screenshots.js",
+		"readme": "node scripts/readme.js",
+		"version": "npm run readme && git add README.md",
+		"prepublishOnly": "npm run build"
+	},
+	"devDependencies": {
+		"clean-css": "^5.3.3",
+		"jodit": "4.17.1",
+		"jodit-pro": "4.15.13",
+		"less": "^4.2.0",
+		"playwright": "^1.63.0"
+	}
+}
