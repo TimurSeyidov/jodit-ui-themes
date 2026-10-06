@@ -112,6 +112,20 @@ Microsoft Office 2010 look: blue ribbon gradients, golden hover and orange press
 |---|---|---|
 | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/office2010/screenshots/editor.png" alt="office2010: editor" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/office2010/screenshots/finder.png" alt="office2010: file browser" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/office2010/screenshots/finder-pro.png" alt="office2010: Jodit PRO finder" /> |
 
+### quietlight
+
+Quiet Light (VS Code): lavender toolbar, lilac title bars, purple status bar, light green selection, purple accents and folders.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.1.0/themes/quietlight/quietlight.all.min.css" />
+```
+
+<img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/quietlight/screenshots/main.png" alt="quietlight: file browser over the editor" />
+
+| Editor | Finder | Finder (Jodit PRO) |
+|---|---|---|
+| <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/quietlight/screenshots/editor.png" alt="quietlight: editor" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/quietlight/screenshots/finder.png" alt="quietlight: file browser" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/quietlight/screenshots/finder-pro.png" alt="quietlight: Jodit PRO finder" /> |
+
 ### syncfusion
 
 Syncfusion (Tailwind 3 style): cool grey surfaces, indigo accent, soft shadows, rounded fields with a focus ring, indigo-tinted selection, amber folders.

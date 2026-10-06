@@ -1,0 +1,78 @@
+/*!
+ * jodit-ui-themes: Quiet Light theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Quiet Light (VS Code): lavender toolbar, lilac title bars, purple status bar, light green selection, purple accents and folders.
+// Colours from the Quiet Light theme of Visual Studio Code
+// (extensions/theme-quietlight in microsoft/vscode).
+//
+// Palette (`.theme-tokens()`) and the rules beyond the shared base
+// (`.theme-editor()`, `.theme-finder()`) for the quietlight.*.less files.
+// The tokens are described in ../_base/tokens.less.
+
+.theme-tokens() {
+	--ui-font: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', arial, sans-serif;
+	--ui-text: #333;
+	--ui-muted: #6c6c6c;
+	--ui-icon: #54494b;
+	--ui-accent: #705697;
+	--ui-selection: #c9d0d9;
+	--ui-surface: #f5f5f5;
+	--ui-surface-alt: #f2f2f2;
+	--ui-content-bg: #f5f5f5;
+	--ui-line: #c9d0d9;
+	--ui-frame: #c4b7d7;
+	--ui-radius: 6px;
+	--ui-shadow: 0 8px 24px rgb(78 60 105 / 22%);
+	--ui-toolbar-bg: #ededf5;
+	--ui-toolbar-border: #c9d0d9;
+	--ui-btn-radius: 3px;
+	--ui-hover-bg: #e0e0e0;
+	--ui-pressed-bg: #c4d9b1;
+	--ui-pressed-hover-bg: #b7cfa1;
+	--ui-pressed-icon: #333;
+	--ui-status-bg: #705697;
+	--ui-status-text: #fff;
+	--ui-menu-bg: #f5f5f5;
+	--ui-menu-border: #c9d0d9;
+	--ui-menu-radius: 4px;
+	--ui-menu-shadow: 0 4px 12px rgb(78 60 105 / 18%);
+	--ui-menu-hover-bg: #cadeb9;
+	--ui-field-bg: #fff;
+	--ui-field-border: #c9d0d9;
+	--ui-field-hover-border: #adafb7;
+	--ui-field-focus-border: #9769dc;
+	--ui-field-radius: 2px;
+	--ui-push-bg: #f2f2f2;
+	--ui-push-border: #c9d0d9;
+	--ui-push-hover-bg: #e0e0e0;
+	--ui-push-active-bg: #d3dbcd;
+	--ui-push-radius: 2px;
+	--ui-primary-hover-bg: #5f4884;
+	--ui-dialog-border: #c4b7d7;
+	--ui-dialog-header-bg: #c4b7d7;
+	--ui-dialog-header-border: #b3a3cb;
+	--ui-dialog-title-weight: normal;
+	--ui-dialog-footer-bg: #ededf5;
+	--ui-pane-bg: #f2f2f2;
+	--ui-source-bg: #ede8ef;
+	--ui-source-text: #6c6c6c;
+	--ui-item-radius: 3px;
+	--ui-item-hover-bg: #e0e0e0;
+	--ui-item-selected-bg: #c4d9b1;
+	--ui-thumb-radius: 3px;
+	--ui-scrollbar: #c9d0d9;
+	--ui-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 2.5C1 1.7 1.7 1 2.5 1h3.6l1.6 1.6h5.8c.8 0 1.5.7 1.5 1.5v7.4c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%238a70b0'/%3E%3Cpath d='M1 5h14v6.5c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%23b3a0d1'/%3E%3C/svg%3E");
+}
+
+.theme-editor() {
+	// Status bar links stay readable on the purple bar
+	.jodit-status-bar .jodit-status-bar__item a:hover {
+		background: #4e3c69;
+	}
+}
+
+.theme-finder() {
+}
