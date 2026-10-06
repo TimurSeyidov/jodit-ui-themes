@@ -1,5 +1,11 @@
 # jodit-ui-themes
 
+[![npm version](https://img.shields.io/npm/v/jodit-ui-themes)](https://www.npmjs.com/package/jodit-ui-themes)
+[![npm downloads](https://img.shields.io/npm/dm/jodit-ui-themes)](https://www.npmjs.com/package/jodit-ui-themes)
+[![jsDelivr hits](https://img.shields.io/jsdelivr/npm/hm/jodit-ui-themes)](https://www.jsdelivr.com/package/npm/jodit-ui-themes)
+[![Build](https://github.com/TimurSeyidov/jodit-ui-themes/actions/workflows/build.yml/badge.svg)](https://github.com/TimurSeyidov/jodit-ui-themes/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/npm/l/jodit-ui-themes)](https://github.com/TimurSeyidov/jodit-ui-themes/blob/main/LICENSE)
+
 Themes for the [Jodit](https://xdsoft.net/jodit/) editor: the editor itself, the free file browser and the Jodit PRO finder. Each theme is a plain stylesheet loaded after the Jodit styles; no Jodit rebuild is needed.
 
 ## Themes
