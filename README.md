@@ -28,6 +28,34 @@ Catppuccin (Mocha): soothing dark pastel palette with mauve accents, blue links 
 |---|---|---|
 | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/catppuccin/screenshots/editor.png" alt="catppuccin: editor" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/catppuccin/screenshots/finder.png" alt="catppuccin: file browser" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/catppuccin/screenshots/finder-pro.png" alt="catppuccin: Jodit PRO finder" /> |
 
+### chrome
+
+Chrome (2023 refresh, light): light blue tab-strip toolbar, white active-tab pressed buttons, omnibox-style fields, Chrome blue #0B57D0 accent, pill buttons and rounded menus.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.2.0/themes/chrome/chrome.all.min.css" />
+```
+
+<img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/chrome/screenshots/main.png" alt="chrome: file browser over the editor" />
+
+| Editor | Finder | Finder (Jodit PRO) |
+|---|---|---|
+| <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/chrome/screenshots/editor.png" alt="chrome: editor" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/chrome/screenshots/finder.png" alt="chrome: file browser" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/chrome/screenshots/finder-pro.png" alt="chrome: Jodit PRO finder" /> |
+
+### chrome-dark
+
+Chrome (2023 refresh, dark): dark grey tab-strip toolbar, #3C3C3C active-tab pressed buttons, omnibox-style fields, light blue #A8C7FA accent, tonal blue selection, pill buttons and rounded menus.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jodit-ui-themes@1.2.0/themes/chrome-dark/chrome-dark.all.min.css" />
+```
+
+<img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/chrome-dark/screenshots/main.png" alt="chrome-dark: file browser over the editor" />
+
+| Editor | Finder | Finder (Jodit PRO) |
+|---|---|---|
+| <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/chrome-dark/screenshots/editor.png" alt="chrome-dark: editor" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/chrome-dark/screenshots/finder.png" alt="chrome-dark: file browser" /> | <img src="https://raw.githubusercontent.com/TimurSeyidov/jodit-ui-themes/main/themes/chrome-dark/screenshots/finder-pro.png" alt="chrome-dark: Jodit PRO finder" /> |
+
 ### dracula
 
 Dracula: the dark charcoal-purple palette with purple accents, cyan links, red close button and purple folders.

@@ -1,0 +1,97 @@
+/*!
+ * jodit-ui-themes: Chrome Dark theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Chrome (2023 refresh, dark): dark grey tab-strip toolbar, #3C3C3C active-tab pressed buttons, omnibox-style fields, light blue #A8C7FA accent, tonal blue selection, pill buttons and rounded menus.
+// Colours from the default Chrome palette in Chromium
+// (ui/color/sys_color_mixer.cc, ui/color/ref_color_mixer.cc): toolbar =
+// kColorSysHeader, pressed buttons = kColorSysBase (the active tab), fields =
+// kColorSysBaseContainer (the omnibox), accent = kColorSysPrimary.
+//
+// Palette (`.theme-tokens()`) and the rules beyond the shared base
+// (`.theme-editor()`, `.theme-finder()`) for the chrome-dark.*.less files.
+// The tokens are described in ../_base/tokens.less.
+
+.theme-tokens() {
+	// Native scrollbars and form controls in dark colours
+	color-scheme: dark;
+
+	--ui-font: 'Google Sans', roboto, system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--ui-text: #e3e3e3;
+	--ui-muted: #c7c7c7;
+	--ui-icon: #c7c7c7;
+	--ui-accent: #a8c7fa;
+	--ui-selection: #004a77;
+	--ui-surface: #282828;
+	--ui-surface-alt: #1f2020;
+	--ui-content-bg: #282828;
+	--ui-line: #3c3c3c;
+	--ui-frame: #1f2020;
+	--ui-radius: 12px;
+	--ui-shadow: 0 4px 8px 3px rgb(0 0 0 / 35%), 0 1px 3px rgb(0 0 0 / 50%);
+	--ui-toolbar-bg: #1f2020;
+	--ui-toolbar-border: #1f2020;
+	--ui-btn-radius: 16px;
+	--ui-hover-bg: #353636;
+	--ui-pressed-bg: #3c3c3c;
+	--ui-pressed-hover-bg: #474747;
+	--ui-pressed-icon: #a8c7fa;
+	--ui-status-bg: #1f2020;
+	--ui-status-text: #c7c7c7;
+	--ui-menu-bg: #2d2e31;
+	--ui-menu-border: transparent;
+	--ui-menu-radius: 8px;
+	--ui-menu-shadow: 0 2px 6px 2px rgb(0 0 0 / 35%), 0 1px 2px rgb(0 0 0 / 50%);
+	--ui-menu-hover-bg: #3c3c3c;
+	--ui-field-bg: #1f2020;
+	--ui-field-border: #474747;
+	--ui-field-hover-border: #8e918f;
+	--ui-field-focus-border: #a8c7fa;
+	--ui-field-focus-ring: 0 0 0 1px #a8c7fa;
+	--ui-field-radius: 8px;
+	--ui-push-bg: #282828;
+	--ui-push-text: #a8c7fa;
+	--ui-push-border: #8e918f;
+	--ui-push-hover-bg: #323539;
+	--ui-push-active-bg: #3a3e45;
+	--ui-push-radius: 20px;
+	--ui-primary-text: #062e6f;
+	--ui-primary-hover-bg: #b9d2fb;
+	--ui-dialog-border: transparent;
+	--ui-dialog-radius: 12px;
+	--ui-dialog-header-bg: #282828;
+	--ui-dialog-header-border: transparent;
+	--ui-dialog-title-size: 15px;
+	--ui-dialog-title-weight: 500;
+	--ui-dialog-footer-bg: #282828;
+	--ui-close-hover-bg: #3c3c3c;
+	--ui-close-hover-icon: #e3e3e3;
+	--ui-pane-bg: #1f2020;
+	--ui-pane-border: #1f2020;
+	--ui-source-text: #c7c7c7;
+	--ui-files-bg: #282828;
+	--ui-item-radius: 12px;
+	--ui-item-hover-bg: #353636;
+	--ui-item-selected-bg: #004a77;
+	--ui-item-selected-text: #c2e7ff;
+	--ui-thumb-radius: 8px;
+	--ui-scrollbar: #5e5e5e;
+	--ui-folder-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 14'%3E%3Cpath d='M1 2.5C1 1.7 1.7 1 2.5 1h3.6l1.6 1.6h5.8c.8 0 1.5.7 1.5 1.5v7.4c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%234c8df6'/%3E%3Cpath d='M1 5h14v6.5c0 .8-.7 1.5-1.5 1.5h-11C1.7 13 1 12.3 1 11.5z' fill='%237cacf8'/%3E%3C/svg%3E");
+}
+
+.theme-editor() {
+	// Menus: a little vertical padding around the items
+	&.jodit-popup .jodit-popup__content {
+		padding: 4px 0;
+	}
+}
+
+.theme-finder() {
+	// Side panel: pill-shaped folders
+	.jodit-file-browser-tree__item,
+	.jodit-ui-browser-folder {
+		border-radius: 16px;
+	}
+}

@@ -1,0 +1,27 @@
+/*!
+ * jodit-ui-themes: Chrome Dark theme for Jodit
+ * https://github.com/TimurSeyidov/jodit-ui-themes
+ * Released under the MIT license, see LICENSE in the project root.
+ */
+
+// Chrome Dark theme, file browser part: the free Jodit file browser and the
+// Jodit PRO finder. Buttons, inputs and menus inside the file browsers come
+// from the editor part (chrome-dark.editor.css).
+
+// Usage: load the stylesheet after the Jodit styles and set
+// `theme: 'chrome-dark'`. Palette and theme-specific rules: _theme.less.
+
+@import (reference) '../_base/tokens.less';
+@import (reference) '../_base/finder.less';
+@import (reference) '_theme.less';
+
+:is(
+		.jodit_theme_chrome-dark,
+		.jodit-dialog_theme_chrome-dark,
+		.jodit-file-browser-pro_theme_chrome-dark
+	) {
+	.jui-defaults();
+	.theme-tokens();
+	.jui-finder();
+	.theme-finder();
+}
