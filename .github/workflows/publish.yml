@@ -21,11 +21,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # No `registry-url`: it writes an .npmrc with a placeholder token, and npm
+      # then tries that token instead of trusted publishing (E404 on publish)
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-          registry-url: https://registry.npmjs.org
 
       # Trusted publishing needs npm 11.5.1 or newer
       - run: npm install -g npm@^11.5.1
