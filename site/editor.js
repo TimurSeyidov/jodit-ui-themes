@@ -26,6 +26,31 @@
 	);
 
 	/**
+	 * Keep a custom theme on the Jodit PRO finder: its settings panel resets
+	 * every theme except `default` and `dark` to `default` when it opens.
+	 *
+	 * @param {object} browser the file browser instance (`editor.filebrowser`)
+	 * @param {string} name the theme to keep
+	 */
+	function keepTheme(browser, name) {
+		const state = browser && browser.state;
+
+		if (!state || typeof state.on !== 'function') {
+			return;
+		}
+
+		// Restore after the current change event: a nested change would not
+		// reach the finder's own listeners that update the theme classes
+		state.on('change.theme', () => {
+			if (state.theme !== name) {
+				queueMicrotask(() => {
+					state.theme = name;
+				});
+			}
+		});
+	}
+
+	/**
 	 * Create the demo editor.
 	 *
 	 * @param {object} [extra] options added to the shared ones (e.g. `license`)
@@ -47,6 +72,8 @@
 			},
 			...extra
 		});
+
+		keepTheme(editor.filebrowser, theme);
 
 		document.getElementById('browser').addEventListener('click', () => {
 			editor.filebrowser.open(({ baseurl, files }) => {

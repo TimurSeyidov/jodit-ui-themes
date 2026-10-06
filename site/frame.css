@@ -45,3 +45,35 @@ body {
 	font-size: 13px;
 	transform: translateX(-50%);
 }
+
+/* Jodit PRO trial note (shown until a license key is set): Jodit inserts it
+   with an inline red style; keep it visible as a neat badge in the colours
+   of the current theme */
+.jodit-workplace > div:has(> div > a[href^='https://xdsoft.net/jodit/pro']),
+.jodit-file-browser-pro__panel > div:has(> div > a[href^='https://xdsoft.net/jodit/pro']) {
+	z-index: 3;
+	right: 12px !important;
+	bottom: 12px !important;
+	padding: 3px 10px;
+	border: 1px solid var(--jd-color-border, #e5e7eb);
+	border-radius: 999px;
+	background: var(--jd-color-panel, #fff);
+	box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+	color: var(--jd-color-label, #6b7280) !important;
+	font: 12px/1.5 system-ui, -apple-system, 'Segoe UI', roboto, sans-serif;
+}
+
+/* Above the finder status bar */
+.jodit-file-browser-pro__panel > div:has(> div > a[href^='https://xdsoft.net/jodit/pro']) {
+	bottom: 30px !important;
+}
+
+:is(.jodit-workplace, .jodit-file-browser-pro__panel) > div > div > a[href^='https://xdsoft.net/jodit/pro'] {
+	color: var(--jd-color-text-icons, #374151);
+	font-weight: 600;
+	text-decoration: none;
+}
+
+:is(.jodit-workplace, .jodit-file-browser-pro__panel) > div > div > a[href^='https://xdsoft.net/jodit/pro']:hover {
+	text-decoration: underline;
+}

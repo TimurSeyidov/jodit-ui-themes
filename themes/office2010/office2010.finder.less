@@ -372,4 +372,71 @@
 			opacity: 1;
 		}
 	}
+
+	// Settings panel (gear button): the theme switch is hidden because it
+	// would replace this theme with Jodit's light or dark one; the options
+	// become segmented controls with the ribbon's pressed state
+	.jodit-ui-browser-settings {
+		border-left-color: var(--office-line);
+		background: #f6f9fd;
+		color: var(--office-text);
+
+		&__theme {
+			display: none;
+		}
+
+		&__title {
+			color: var(--office-title);
+		}
+
+		&__close svg {
+			fill: var(--office-text);
+		}
+
+		&__options::-webkit-scrollbar-track {
+			box-shadow: none;
+		}
+
+		.jodit-ui-button-group__label {
+			color: var(--office-title);
+		}
+
+		.jodit-ui-button-group__options {
+			display: inline-flex;
+			overflow: hidden;
+			border: 1px solid #8ba0bc;
+			border-radius: 3px;
+		}
+
+		.jodit-ui-button-group .jodit-ui-button {
+			border: 0;
+			border-radius: 0;
+			background: linear-gradient(#fdfdfe, #eef3fa 45%, #e1e9f5 50%, #e7eef8);
+			box-shadow: none;
+			color: var(--office-text);
+			outline: 0;
+
+			.jodit-ui-button__text {
+				color: var(--office-text);
+			}
+
+			& + .jodit-ui-button,
+			&[aria-pressed='true']:not([disabled]) + .jodit-ui-button {
+				border-left: 1px solid #a7bad7;
+			}
+
+			&:hover:not([disabled]) {
+				background: linear-gradient(#fffcea, #fff1bd 45%, #ffe38d 50%, #fff4c7);
+			}
+
+			&[aria-pressed='true']:not([disabled]) {
+				background: linear-gradient(#fcd9a2, #fbc77a 45%, #f9ad49 50%, #fcd38c);
+				box-shadow: none;
+
+				.jodit-ui-button__text {
+					color: #000;
+				}
+			}
+		}
+	}
 }

@@ -219,6 +219,19 @@ The package also ships the `.less` sources, so a theme can be compiled into your
 - The same stylesheet works with Jodit and Jodit PRO.
 - Switching `theme` on a live editor leaves the previous theme class in place; recreate the editor instead.
 - The Jodit PRO finder keeps the last used theme in `localStorage` and prefers it over the `theme` option. Clear that value if the theme does not apply.
+- The settings panel of the Jodit PRO finder resets every theme except `default` and `dark` to `default` when it opens. The themes hide its theme switch; to keep the theme, restore it when the finder changes it:
+
+  ```js
+  const editor = Jodit.make('#editor', { theme: 'nord' });
+  const finder = editor.filebrowser;
+
+  finder.state.on('change.theme', () => {
+  	if (finder.state.theme !== 'nord') {
+  		// after the current change event, so the finder updates its classes
+  		queueMicrotask(() => (finder.state.theme = 'nord'));
+  	}
+  });
+  ```
 - If the editor lives in a shadow root, put the theme `<link>` inside the shadow root.
 
 ## Compatibility

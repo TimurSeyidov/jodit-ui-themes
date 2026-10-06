@@ -152,4 +152,32 @@
 .jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
 ) .jodit-ui-browser-status-bar{border-top-color:var(--win-line);background:#fff;color:var(--win-muted)}:is(
 .jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
-) .jodit-ui-browser-status-bar [class*='__slot-']{opacity:1}
+) .jodit-ui-browser-status-bar [class*='__slot-']{opacity:1}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings{border-left-color:var(--win-line);background:#fff;color:var(--win-text)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings__theme{display:none}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings__title{color:var(--win-text);font-weight:400}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings__close svg{fill:var(--win-muted)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings__options::-webkit-scrollbar-track{box-shadow:none}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group__label{color:var(--win-muted)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group__options{display:inline-flex;overflow:hidden;border:1px solid #adadad}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button{border:0;border-radius:0;background:#e1e1e1;box-shadow:none;color:#000;outline:0}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button .jodit-ui-button__text{color:#000}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button+.jodit-ui-button,:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button[aria-pressed=true]:not([disabled])+.jodit-ui-button{border-left:1px solid #adadad}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button:hover:not([disabled]){background:#e5f1fb}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button[aria-pressed=true]:not([disabled]){background:var(--win-selected);box-shadow:inset 0 0 0 1px var(--win-selected-border)}:is(
+.jodit_theme_windows10,.jodit-dialog_theme_windows10,.jodit-file-browser-pro_theme_windows10
+) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button[aria-pressed=true]:not([disabled]) .jodit-ui-button__text{color:#000}

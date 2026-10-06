@@ -743,6 +743,137 @@
 		.jodit_theme_windows11,
 		.jodit-dialog_theme_windows11,
 		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings {
+  border-left-color: var(--ui-pane-border);
+  background: var(--ui-surface);
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings__theme {
+  display: none;
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings__title {
+  color: var(--ui-text);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings__close svg {
+  fill: var(--ui-muted);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings__options::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings__options::-webkit-scrollbar-thumb {
+  background-color: var(--ui-scrollbar);
+  outline: 0;
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group__label {
+  color: var(--ui-muted);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group__options {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid var(--ui-push-border);
+  border-radius: var(--ui-push-radius);
+  box-shadow: var(--ui-push-shadow);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button {
+  border: 0;
+  border-radius: 0;
+  background: var(--ui-push-bg);
+  box-shadow: none;
+  color: var(--ui-push-text);
+  outline: 0;
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button svg {
+  fill: var(--ui-push-text);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button .jodit-ui-button__text {
+  color: var(--ui-push-text);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button + .jodit-ui-button,
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button[aria-pressed='true']:not([disabled]) + .jodit-ui-button {
+  border-left: 1px solid var(--ui-push-border);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button:hover:not([disabled]) {
+  background: var(--ui-push-hover-bg);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button[aria-pressed='true']:not([disabled]) {
+  background: var(--ui-pressed-bg);
+  box-shadow: none;
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button[aria-pressed='true']:not([disabled]) .jodit-ui-button__text {
+  color: var(--ui-pressed-icon);
+  font-weight: 600;
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
+	) .jodit-ui-browser-settings .jodit-ui-button-group .jodit-ui-button[aria-pressed='true']:not([disabled]) svg {
+  fill: var(--ui-pressed-icon);
+}
+:is(
+		.jodit_theme_windows11,
+		.jodit-dialog_theme_windows11,
+		.jodit-file-browser-pro_theme_windows11
 	) .jodit-ui-browser-status-bar {
   border-top-color: var(--ui-toolbar-border);
   background: var(--ui-status-bg);
