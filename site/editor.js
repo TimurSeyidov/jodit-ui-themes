@@ -21,6 +21,35 @@
 		setTimeout(() => el.remove(), 2500);
 	}
 
+	// Plugins from https://github.com/TimurSeyidov/jodit-plugins, latest 1.x.
+	// jsDelivr lets browsers keep a file for 7 days; the date in the URL makes
+	// them pick up a new release within a day. Loaded without blocking the
+	// page; the editor is created once they are in (or failed).
+	const PLUGINS = ['code', 'mailto', 'qrcode'];
+	const day = new Date().toISOString().slice(0, 10);
+
+	function loadScript(src) {
+		return new Promise((resolve, reject) => {
+			const script = document.createElement('script');
+			script.src = src;
+			script.onload = resolve;
+			script.onerror = () => reject(new Error(`Cannot load ${src}`));
+			document.head.appendChild(script);
+		});
+	}
+
+	const pluginsReady = Promise.allSettled(
+		PLUGINS.map(name =>
+			loadScript(
+				`https://cdn.jsdelivr.net/npm/jodit-plugin-${name}@1/dist/es2021/plugins/${name}/${name}.min.js?d=${day}`
+			)
+		)
+	).then(results =>
+		results
+			.filter(result => result.status === 'rejected')
+			.forEach(result => console.warn(result.reason.message))
+	);
+
 	DemoConnector.onFakeAction(action =>
 		toast(`Demo mode: "${action}" is not saved on the server`)
 	);
@@ -54,9 +83,11 @@
 	 * Create the demo editor.
 	 *
 	 * @param {object} [extra] options added to the shared ones (e.g. `license`)
-	 * @returns {object} the Jodit instance
+	 * @returns {Promise<object>} the Jodit instance, once the plugins are loaded
 	 */
-	function makeEditor(extra = {}) {
+	async function makeEditor(extra = {}) {
+		await pluginsReady;
+
 		const editor = Jodit.make('#editor', {
 			theme,
 			height: 560,
