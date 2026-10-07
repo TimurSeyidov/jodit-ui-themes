@@ -297,7 +297,7 @@ The generated `.css` and `.min.css` files are committed together with their `.le
 
 ## Live demo
 
-`site/` holds the demo pages; `npm run site` assembles them with the built themes into `_site/` (serve it with any static server, e.g. `python3 -m http.server -d _site`). The Pages workflow deploys it on every push to `main`. Jodit and Jodit PRO come from jsDelivr in the versions listed in `devDependencies`. The file browsers read the public Jodit demo connector; actions that would change files are answered by `site/mock.js` and never reach the server.
+`site/` holds the demo pages; `npm run site` assembles them with the built themes into `_site/` (serve it with any static server, e.g. `python3 -m http.server -d _site`). The Pages workflow deploys it on every push to `main`. Jodit and Jodit PRO come from jsDelivr in the versions listed in `devDependencies`. Both editors also load the [jodit-plugins](https://github.com/TimurSeyidov/jodit-plugins) (code blocks, email links, QR codes) to show how the themes style plugin dialogs. The file browsers read the public Jodit demo connector; actions that would change files are answered by `site/mock.js` and never reach the server.
 
 ## Releasing
 
