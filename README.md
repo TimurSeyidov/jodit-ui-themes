@@ -1,4 +1,4 @@
-# jodit-ui-themes
+# UI themes for Jodit
 
 [![npm version](https://img.shields.io/npm/v/jodit-ui-themes)](https://www.npmjs.com/package/jodit-ui-themes)
 [![npm downloads](https://img.shields.io/npm/dm/jodit-ui-themes)](https://www.npmjs.com/package/jodit-ui-themes)
